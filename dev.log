@@ -1,0 +1,224 @@
+
+> trado@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.3.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.88.164:3000
+
+ ✓ Starting...
+ ✓ Ready in 2.1s
+ ○ Compiling /perps ...
+ ✓ Compiled /perps in 7.2s (7872 modules)
+ GET /perps 200 in 7746ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 3.1s (7876 modules)
+ GET /perps 404 in 3432ms
+ GET /perps 200 in 319ms
+ GET /_next/static/css/app/layout.css?v=1751443936591 404 in 52ms
+ GET /_next/static/chunks/main-app.js?v=1751443936591 404 in 88ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 91ms
+ GET /perps 404 in 100ms
+ GET /_next/static/css/app/layout.css?v=1751443948611 404 in 49ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 44ms
+ GET /perps 404 in 270ms
+ ✓ Compiled in 8.3s (3794 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 19s (7876 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /perps 404 in 23854ms
+ GET /_next/static/webpack/7f5719e86cddab53.webpack.hot-update.json 404 in 23661ms
+ GET /perps 200 in 3988ms
+ GET /perps 200 in 4008ms
+ ✓ Compiled in 14.1s (3797 modules)
+ GET /_next/static/chunks/app/(trading)/perps/page.js 404 in 581ms
+ ✓ Compiled in 5.5s (3797 modules)
+ ✓ Compiled in 2.4s (3797 modules)
+ ✓ Compiled in 3.9s (3794 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ○ Compiling /_not-found ...
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled /_not-found in 1339ms (7862 modules)
+ GET /perps 404 in 2112ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/server-development/1.pack.gz_' -> '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/server-development/1.pack.gz'
+ ✓ Compiled in 57.5s (7866 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ○ Compiling /_not-found ...
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled /_not-found in 3.2s (7856 modules)
+ GET /perps 404 in 50486ms
+ ✓ Compiled in 4.5s (7870 modules)
+ GET /perps 200 in 268ms
+ ✓ Compiled in 17.5s (7866 modules)
+ GET /perps 200 in 1414ms
+ GET /perps 200 in 9606ms
+ ✓ Compiled in 2.4s (7866 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 3.4s (7856 modules)
+ GET /perps 404 in 3568ms
+ GET /perps 200 in 347ms
+ ✓ Compiled in 20.1s (7870 modules)
+ GET /perps 200 in 476ms
+ ✓ Compiled in 11.2s (7870 modules)
+ GET /perps 200 in 2448ms
+ ✓ Compiled in 6.5s (7874 modules)
+ GET /perps 200 in 1050ms
+ ✓ Compiled in 12.3s (7870 modules)
+ GET /perps 200 in 144ms
+ ✓ Compiled in 7s (7870 modules)
+ GET /perps 200 in 330ms
+ ✓ Compiled in 10.1s (7856 modules)
+ ✓ Compiled in 2.5s (7856 modules)
+ ✓ Compiled in 3.4s (3786 modules)
+ ✓ Compiled in 4.4s (7848 modules)
+ ✓ Compiled in 4.8s (7848 modules)
+ ✓ Compiled in 4.3s (7862 modules)
+ ✓ Compiled in 13.9s (7858 modules)
+ ✓ Compiled in 12.2s (7858 modules)
+ ✓ Compiled in 12.1s (7852 modules)
+ ✓ Compiled in 34.6s (7852 modules)
+ ✓ Compiled in 3s (3784 modules)
+ ✓ Compiled in 881ms (3784 modules)
+ ✓ Compiled in 726ms (3784 modules)
+ ✓ Compiled in 1285ms (3784 modules)
+ ✓ Compiled in 699ms (3784 modules)
+ ✓ Compiled in 815ms (3784 modules)
+ ✓ Compiled in 3.2s (3784 modules)
+ ✓ Compiled in 3.1s (7852 modules)
+ ✓ Compiled in 895ms (7852 modules)
+ ✓ Compiled in 1248ms (7852 modules)
+ ✓ Compiled in 1213ms (7852 modules)
+ ✓ Compiled in 25.1s (7852 modules)
+ ✓ Compiled in 4.5s (7852 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/3.pack.gz_' -> '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/3.pack.gz'
+ ✓ Compiled in 30.4s (7852 modules)
+ ✓ Compiled in 3.9s (7852 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/server-development/1.pack.gz_' -> '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/server-development/1.pack.gz'
+ ✓ Compiled in 12.7s (7852 modules)
+ ✓ Compiled in 6.4s (7852 modules)
+ ✓ Compiled in 2.9s (7852 modules)
+ ✓ Compiled in 1796ms (7852 modules)
+ ✓ Compiled in 4.7s (7852 modules)
+ ✓ Compiled in 1744ms (7852 modules)
+ ✓ Compiled in 4.7s (7852 modules)
+ ✓ Compiled in 15.5s (7850 modules)
+ ✓ Compiled in 43.7s (3783 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/7.pack.gz_' -> '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/7.pack.gz'
+ ✓ Compiled in 1304ms (3783 modules)
+ ✓ Compiled in 1992ms (3783 modules)
+ ✓ Compiled in 4s (3783 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/0.pack.gz_' -> '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/0.pack.gz'
+ ✓ Compiled in 3.5s (3783 modules)
+ ✓ Compiled in 6.6s (3783 modules)
+ ✓ Compiled in 10.6s (3783 modules)
+ ✓ Compiled in 3.9s (3783 modules)
+ ✓ Compiled in 2.9s (3783 modules)
+ ✓ Compiled in 2s (3783 modules)
+ ✓ Compiled in 1522ms (3783 modules)
+ ✓ Compiled in 1149ms (3783 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/0.pack.gz_' -> '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/0.pack.gz'
+ ✓ Compiled in 4.2s (3783 modules)
+ ✓ Compiled in 48.5s (7837 modules)
+ ✓ Compiled in 55.6s (7851 modules)
+ ✓ Compiled in 56s (7829 modules)
+ ✓ Compiled in 1719ms (3772 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/server-development/4.pack.gz_' -> '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/server-development/4.pack.gz'
+ ✓ Compiled in 9.2s (3772 modules)
+ ✓ Compiled in 1517ms (3772 modules)
+ ✓ Compiled in 1483ms (3772 modules)
+ ✓ Compiled in 13.3s (3772 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/0.pack.gz_' -> '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/0.pack.gz'
+ ✓ Compiled in 2.6s (3772 modules)
+ ✓ Compiled in 18.1s (3772 modules)
+ ✓ Compiled in 7.9s (3772 modules)
+ ✓ Compiled in 1720ms (3772 modules)
+ ✓ Compiled in 10.2s (3772 modules)
+ ✓ Compiled in 15.4s (3772 modules)
+ ✓ Compiled in 8.9s (3772 modules)
+ ✓ Compiled in 5.9s (3772 modules)
+ ✓ Compiled in 35.9s (3772 modules)
+ ✓ Compiled in 4.4s (3772 modules)
+ ✓ Compiled in 31.5s (3772 modules)
+ ✓ Compiled in 10.1s (3772 modules)
+ ✓ Compiled in 2.2s (3772 modules)
+ ✓ Compiled in 44.5s (3772 modules)
+ ✓ Compiled in 5.1s (3772 modules)
+ ✓ Compiled in 15s (3772 modules)
+ ✓ Compiled in 23.6s (3772 modules)
+ ✓ Compiled in 5.1s (3772 modules)
+ ✓ Compiled in 3.5s (3772 modules)
+ ✓ Compiled in 28.8s (3772 modules)
+ ✓ Compiled in 3s (3772 modules)
+ ✓ Compiled in 57.8s (3772 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Restoring pack failed from /Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development.pack.gz: Error: unexpected end of file
+ ✓ Compiled in 45.4s (7823 modules)
+ ✓ Compiled in 28.4s (3731 modules)
+ ⨯ ./components/layout/header.tsx
+Error:   [31mx[0m Expected ',', got ':'
+    ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/layout/header.tsx[0m:16:1]
+ [2m13[0m | 
+ [2m14[0m | const navigationItems = [
+ [2m15[0m |  
+ [2m16[0m |     name: "Screener",
+    : [35;1m        ^[0m
+ [2m17[0m |     href: "/screener",
+ [2m18[0m |     icon: Search,
+ [2m19[0m |   },
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/layout/header.tsx
+ ✓ Compiled in 6.2s (3744 modules)
+ ✓ Compiled in 6.6s (3744 modules)
+ ✓ Compiled in 11.1s (3744 modules)
+ ✓ Compiled in 10s (3744 modules)
+ ✓ Compiled in 10.9s (3744 modules)
+ ✓ Compiled in 26.1s (3744 modules)
+ ✓ Compiled in 15.7s (3744 modules)
+ ✓ Compiled in 9.2s (3744 modules)
+ ✓ Compiled in 33.9s (3744 modules)
+ ✓ Compiled in 35.6s (3744 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: invalid block type
+ ✓ Compiled in 12.7s (3744 modules)
+ ✓ Compiled in 13s (3744 modules)
+ ✓ Compiled in 6s (3751 modules)
+ ✓ Compiled in 7.6s (3751 modules)
+ ✓ Compiled in 4.4s (3751 modules)
+ ✓ Compiled in 4s (3751 modules)
+ ✓ Compiled in 2.7s (3751 modules)
+ ✓ Compiled in 1515ms (3751 modules)
+ ✓ Compiled in 3.8s (3751 modules)
+ ✓ Compiled in 9.4s (3751 modules)
+ ✓ Compiled in 2.3s (3751 modules)
+ ✓ Compiled in 7.7s (3751 modules)
+ ✓ Compiled in 6.3s (3683 modules)
+ ✓ Compiled in 1208ms (337 modules)
+ ✓ Compiled in 4.4s (337 modules)
+ ✓ Compiled in 7s (337 modules)
+ ✓ Compiled in 3.1s (337 modules)
+ ✓ Compiled in 1001ms (337 modules)
+ ✓ Compiled in 1080ms (337 modules)
+ ✓ Compiled in 3.7s (337 modules)
+ ✓ Compiled in 2.6s (337 modules)
+ ✓ Compiled in 12.5s (337 modules)
+ ✓ Compiled in 598ms (337 modules)
+ ✓ Compiled in 2.8s (337 modules)
+ ✓ Compiled in 4.7s (337 modules)
+ ✓ Compiled in 4.6s (337 modules)
+ ✓ Compiled in 2.6s (338 modules)
+ ✓ Compiled in 5.8s (340 modules)
+ ✓ Compiled in 2s (346 modules)
+ ✓ Compiled in 8.5s (346 modules)
+ ✓ Compiled in 19.3s (346 modules)
+ ✓ Compiled in 3.1s (346 modules)
+ ✓ Compiled in 12.1s (346 modules)
+ ✓ Compiled in 14.3s (346 modules)
+ ✓ Compiled in 2.6s (346 modules)
+ ✓ Compiled in 2.8s (346 modules)
+ ✓ Compiled in 3.2s (346 modules)
