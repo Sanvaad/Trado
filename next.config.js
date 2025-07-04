@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: "build",
   // Remove output: 'export' for full Next.js functionality
   async redirects() {
     return [
