@@ -2,16 +2,16 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { Search, Wallet, User, LogOut } from "lucide-react";
+import { BarChart3, User, LogOut, Wallet } from "lucide-react";
 import Link from "next/link";
-import { useAuth } from "@/lib/auth";
-import { AuthModal } from "@/components/auth/auth-modal";
+import { useAuth } from "@/lib/auth-context";
+import { LoginModal } from "@/components/auth/login-modal";
 
 const navigationItems = [
   {
     name: "Screener",
     href: "/screener",
-    icon: Search,
+    icon: BarChart3,
   },
   {
     name: "Portfolio",
@@ -22,8 +22,8 @@ const navigationItems = [
 
 export function Header() {
   const pathname = usePathname();
-  const { user, logout } = useAuth();
-  const [showAuthModal, setShowAuthModal] = useState(false);
+  const { user, logout, isAuthenticated } = useAuth();
+  const [showLoginModal, setShowLoginModal] = useState(false);
 
   return (
     <header className="bg-zinc-900 border-b border-zinc-800 sticky top-0 z-50">
@@ -31,12 +31,12 @@ export function Header() {
         <div className="flex h-14 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-8">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-cyan-400 rounded-lg flex items-center justify-center">
-                <div className="w-6 h-6 bg-cyan-400 rounded-sm"></div>
+            <Link href="/screener" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center">
+                <div className="w-6 h-6 bg-white rounded-sm"></div>
               </div>
-              <span className="text-lg font-semibold text-white">kanelabs</span>
-            </div>
+              <span className="text-lg font-semibold text-white">Crypto Tracker</span>
+            </Link>
 
             {/* Navigation */}
             <nav className="hidden md:flex items-center space-x-6">
@@ -61,38 +61,38 @@ export function Header() {
             </nav>
           </div>
 
-          {/* Right side - Auth Controls */}
+          {/* Right side - Auth */}
           <div className="flex items-center space-x-3">
-            {user ? (
-              <div className="flex items-center gap-3">
+            {isAuthenticated ? (
+              <div className="flex items-center space-x-3">
                 <div className="text-right">
-                  <p className="text-white text-sm font-medium">{user.name}</p>
-                  <p className="text-zinc-400 text-xs">{user.balance.toFixed(2)} tokens</p>
+                  <p className="text-white text-sm">Welcome, {user?.username}</p>
+                  <p className="text-zinc-400 text-xs">{user?.email}</p>
                 </div>
                 <button
                   onClick={logout}
-                  className="flex items-center gap-2 px-3 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg text-sm font-medium transition-colors"
+                  className="flex items-center space-x-2 bg-zinc-700 hover:bg-zinc-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
                 >
                   <LogOut className="w-4 h-4" />
-                  Logout
+                  <span>Logout</span>
                 </button>
               </div>
             ) : (
               <button
-                onClick={() => setShowAuthModal(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors"
+                onClick={() => setShowLoginModal(true)}
+                className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
               >
                 <User className="w-4 h-4" />
-                Sign In
+                <span>Login</span>
               </button>
             )}
           </div>
         </div>
       </div>
       
-      <AuthModal
-        isOpen={showAuthModal}
-        onClose={() => setShowAuthModal(false)}
+      <LoginModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
       />
     </header>
   );

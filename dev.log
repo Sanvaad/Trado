@@ -222,3 +222,2333 @@ Import trace for requested module:
  ✓ Compiled in 2.6s (346 modules)
  ✓ Compiled in 2.8s (346 modules)
  ✓ Compiled in 3.2s (346 modules)
+ ✓ Compiled in 3.3s (346 modules)
+ ✓ Compiled in 2.1s (346 modules)
+ ✓ Compiled in 320ms (346 modules)
+ ✓ Compiled in 299ms (346 modules)
+ ✓ Compiled in 686ms (346 modules)
+ ✓ Compiled in 219ms (346 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/0.pack.gz_' -> '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/0.pack.gz'
+ ✓ Compiled in 220ms (346 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/0.pack.gz_' -> '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/0.pack.gz'
+ ✓ Compiled in 193ms (346 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/0.pack.gz_' -> '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/0.pack.gz'
+ ✓ Compiled in 1805ms (346 modules)
+ ✓ Compiled in 161ms (346 modules)
+ ✓ Compiled in 302ms (346 modules)
+ ✓ Compiled in 205ms (346 modules)
+ ✓ Compiled in 229ms (346 modules)
+ ✓ Compiled in 472ms (346 modules)
+ ✓ Compiled in 377ms (346 modules)
+ ✓ Compiled in 462ms (346 modules)
+ ✓ Compiled in 196ms (346 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/0.pack.gz_' -> '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/0.pack.gz'
+ ✓ Compiled in 356ms (346 modules)
+ ✓ Compiled in 203ms (346 modules)
+ ✓ Compiled in 222ms (346 modules)
+ ✓ Compiled in 98ms (346 modules)
+ ✓ Compiled in 403ms (346 modules)
+ ✓ Compiled in 143ms (346 modules)
+ ✓ Compiled in 75ms (346 modules)
+ ✓ Compiled in 272ms (346 modules)
+ ✓ Compiled in 94ms (346 modules)
+ ✓ Compiled in 338ms (346 modules)
+ ✓ Compiled in 263ms (346 modules)
+ ✓ Compiled in 79ms (346 modules)
+ ✓ Compiled in 89ms (346 modules)
+ ✓ Compiled in 139ms (346 modules)
+ ✓ Compiled in 146ms (346 modules)
+ ✓ Compiled in 304ms (346 modules)
+ ✓ Compiled in 206ms (346 modules)
+ ⚠ Found a change in next.config.js. Restarting the server to apply the changes...
+   ▲ Next.js 15.3.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.4:3000
+
+ ✓ Starting...
+ ✓ Ready in 12s
+ ○ Compiling /screener ...
+ ✓ Compiled /screener in 3.7s (801 modules)
+ GET /screener 200 in 3990ms
+ ○ Compiling /api/screener ...
+ ✓ Compiled /api/screener in 705ms (820 modules)
+ GET /screener 200 in 36ms
+ GET /api/screener?sortBy=rank&sortOrder=asc&limit=100 200 in 1863ms
+ ✓ Compiled in 210ms (351 modules)
+ GET /screener 200 in 24ms
+ ✓ Compiled in 126ms (351 modules)
+ GET /screener 200 in 23ms
+ GET /screener 200 in 35ms
+ GET /screener 200 in 112ms
+ GET /screener 200 in 26ms
+ GET /api/screener?sortBy=rank&sortOrder=asc&limit=100 200 in 1036ms
+ ○ Compiling /portfolio ...
+ ✓ Compiled /portfolio in 502ms (835 modules)
+ GET /portfolio 200 in 564ms
+ ✓ Compiled /_not-found in 281ms (839 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /_next/static/webpack/a6f0be15a953b804.webpack.hot-update.json 404 in 377ms
+ GET /screener 200 in 64ms
+ GET /api/screener?sortBy=rank&sortOrder=asc&limit=100 200 in 107ms
+ GET /hone 404 in 46ms
+ GET /home 404 in 31ms
+ GET /sign-in 404 in 41ms
+ GET /screener 200 in 70ms
+ GET /api/screener?sortBy=rank&sortOrder=asc&limit=100 200 in 477ms
+ GET /portfolio 200 in 36ms
+ ✓ Compiled /api/portfolio in 188ms (841 modules)
+ GET /api/portfolio 200 in 1150ms
+ GET /api/portfolio 200 in 64ms
+ GET /api/portfolio 200 in 67ms
+ GET /api/portfolio 200 in 65ms
+Error fetching portfolio data: Error: Failed to fetch data from CoinGecko API
+    at GET (app/api/portfolio/route.ts:16:12)
+  14 |
+  15 |     if (!response.ok) {
+> 16 |       throw new Error('Failed to fetch data from CoinGecko API');
+     |            ^
+  17 |     }
+  18 |
+  19 |     const coinsData = await response.json();
+ GET /api/portfolio 500 in 140ms
+Error fetching portfolio data: Error: Failed to fetch data from CoinGecko API
+    at GET (app/api/portfolio/route.ts:16:12)
+  14 |
+  15 |     if (!response.ok) {
+> 16 |       throw new Error('Failed to fetch data from CoinGecko API');
+     |            ^
+  17 |     }
+  18 |
+  19 |     const coinsData = await response.json();
+ GET /api/portfolio 500 in 123ms
+Error fetching portfolio data: Error: Failed to fetch data from CoinGecko API
+    at GET (app/api/portfolio/route.ts:16:12)
+  14 |
+  15 |     if (!response.ok) {
+> 16 |       throw new Error('Failed to fetch data from CoinGecko API');
+     |            ^
+  17 |     }
+  18 |
+  19 |     const coinsData = await response.json();
+ GET /api/portfolio 500 in 115ms
+Error fetching portfolio data: Error: Failed to fetch data from CoinGecko API
+    at GET (app/api/portfolio/route.ts:16:12)
+  14 |
+  15 |     if (!response.ok) {
+> 16 |       throw new Error('Failed to fetch data from CoinGecko API');
+     |            ^
+  17 |     }
+  18 |
+  19 |     const coinsData = await response.json();
+ GET /api/portfolio 500 in 108ms
+ GET /screener 200 in 44ms
+Error fetching screener data: Error: Failed to fetch data from CoinGecko API
+    at GET (app/api/screener/route.ts:41:12)
+  39 |
+  40 |     if (!response.ok) {
+> 41 |       throw new Error('Failed to fetch data from CoinGecko API');
+     |            ^
+  42 |     }
+  43 |
+  44 |     const coinsData = await response.json();
+ GET /api/screener?sortBy=rank&sortOrder=asc&limit=100 500 in 104ms
+Error fetching screener data: Error: Failed to fetch data from CoinGecko API
+    at GET (app/api/screener/route.ts:41:12)
+  39 |
+  40 |     if (!response.ok) {
+> 41 |       throw new Error('Failed to fetch data from CoinGecko API');
+     |            ^
+  42 |     }
+  43 |
+  44 |     const coinsData = await response.json();
+ GET /api/screener?sortBy=rank&sortOrder=asc&limit=100 500 in 79ms
+ GET /portfolio 200 in 21ms
+Error fetching portfolio data: Error: Failed to fetch data from CoinGecko API
+    at GET (app/api/portfolio/route.ts:16:12)
+  14 |
+  15 |     if (!response.ok) {
+> 16 |       throw new Error('Failed to fetch data from CoinGecko API');
+     |            ^
+  17 |     }
+  18 |
+  19 |     const coinsData = await response.json();
+ GET /api/portfolio 500 in 98ms
+Error fetching portfolio data: Error: Failed to fetch data from CoinGecko API
+    at GET (app/api/portfolio/route.ts:16:12)
+  14 |
+  15 |     if (!response.ok) {
+> 16 |       throw new Error('Failed to fetch data from CoinGecko API');
+     |            ^
+  17 |     }
+  18 |
+  19 |     const coinsData = await response.json();
+ GET /api/portfolio 500 in 72ms
+ GET /portfolio 200 in 88ms
+Error fetching portfolio data: Error: Failed to fetch data from CoinGecko API
+    at GET (app/api/portfolio/route.ts:16:12)
+  14 |
+  15 |     if (!response.ok) {
+> 16 |       throw new Error('Failed to fetch data from CoinGecko API');
+     |            ^
+  17 |     }
+  18 |
+  19 |     const coinsData = await response.json();
+ GET /api/portfolio 500 in 84ms
+ GET /screener 200 in 19ms
+Error fetching screener data: Error: Failed to fetch data from CoinGecko API
+    at GET (app/api/screener/route.ts:41:12)
+  39 |
+  40 |     if (!response.ok) {
+> 41 |       throw new Error('Failed to fetch data from CoinGecko API');
+     |            ^
+  42 |     }
+  43 |
+  44 |     const coinsData = await response.json();
+ GET /api/screener?sortBy=rank&sortOrder=asc&limit=100 500 in 84ms
+Error fetching screener data: Error: Failed to fetch data from CoinGecko API
+    at GET (app/api/screener/route.ts:41:12)
+  39 |
+  40 |     if (!response.ok) {
+> 41 |       throw new Error('Failed to fetch data from CoinGecko API');
+     |            ^
+  42 |     }
+  43 |
+  44 |     const coinsData = await response.json();
+ GET /api/screener?sortBy=rank&sortOrder=asc&limit=100 500 in 88ms
+ GET /screener 200 in 12ms
+ GET /screener 200 in 13ms
+ GET /screener 200 in 46ms
+Error fetching screener data: Error: Failed to fetch data from CoinGecko API
+    at GET (app/api/screener/route.ts:41:12)
+  39 |
+  40 |     if (!response.ok) {
+> 41 |       throw new Error('Failed to fetch data from CoinGecko API');
+     |            ^
+  42 |     }
+  43 |
+  44 |     const coinsData = await response.json();
+ GET /api/screener?sortBy=rank&sortOrder=asc&limit=100 500 in 161ms
+ GET /screener 200 in 64ms
+Error fetching screener data: Error: Failed to fetch data from CoinGecko API
+    at GET (app/api/screener/route.ts:41:12)
+  39 |
+  40 |     if (!response.ok) {
+> 41 |       throw new Error('Failed to fetch data from CoinGecko API');
+     |            ^
+  42 |     }
+  43 |
+  44 |     const coinsData = await response.json();
+ GET /api/screener?sortBy=rank&sortOrder=asc&limit=100 500 in 85ms
+ GET /screener 200 in 48ms
+Error fetching screener data: Error: Failed to fetch data from CoinGecko API
+    at GET (app/api/screener/route.ts:41:12)
+  39 |
+  40 |     if (!response.ok) {
+> 41 |       throw new Error('Failed to fetch data from CoinGecko API');
+     |            ^
+  42 |     }
+  43 |
+  44 |     const coinsData = await response.json();
+ GET /api/screener?sortBy=rank&sortOrder=asc&limit=100 500 in 90ms
+ GET /screener 200 in 14ms
+Error fetching screener data: Error: Failed to fetch data from CoinGecko API
+    at GET (app/api/screener/route.ts:41:12)
+  39 |
+  40 |     if (!response.ok) {
+> 41 |       throw new Error('Failed to fetch data from CoinGecko API');
+     |            ^
+  42 |     }
+  43 |
+  44 |     const coinsData = await response.json();
+ GET /api/screener?sortBy=rank&sortOrder=asc&limit=100 500 in 100ms
+ ✓ Compiled in 1305ms (831 modules)
+ ✓ Compiled in 605ms (829 modules)
+ ✓ Compiled in 281ms (829 modules)
+ ✓ Compiled in 173ms (363 modules)
+ ✓ Compiled in 163ms (363 modules)
+ ✓ Compiled in 420ms (829 modules)
+ ✓ Compiled in 535ms (832 modules)
+ ✓ Compiled in 279ms (832 modules)
+ ✓ Compiled in 301ms (832 modules)
+ ✓ Compiled in 659ms (836 modules)
+ ✓ Compiled in 556ms (842 modules)
+ ✓ Compiled in 302ms (842 modules)
+ ✓ Compiled in 356ms (842 modules)
+ ✓ Compiled in 218ms (369 modules)
+ ✓ Compiled in 227ms (369 modules)
+ ✓ Compiled in 314ms (842 modules)
+ ✓ Compiled in 285ms (842 modules)
+ ✓ Compiled in 654ms (842 modules)
+ ✓ Compiled in 847ms (844 modules)
+ ✓ Compiled in 659ms (850 modules)
+ ✓ Compiled in 459ms (850 modules)
+ ⨯ ./components/portfolio/portfolio-page.tsx
+Module parse failed: Identifier 'portfolio' has already been declared (210:19)
+|         }, this);
+|     }
+>     const { items: portfolio, totalValue, totalCost, totalPnL, totalPnLPercentage } = portfolioData;
+|     // Sort portfolio
+|     const sortedPortfolio = [
+
+Import trace for requested module:
+./components/portfolio/portfolio-page.tsx
+./app/(trading)/portfolio/page.tsx
+ ⨯ ./components/portfolio/portfolio-page.tsx
+Module parse failed: Identifier 'portfolio' has already been declared (253:19)
+|         }, this);
+|     }
+>     const { items: portfolio, totalValue, totalCost, totalPnL, totalPnLPercentage } = portfolioData;
+|     // Sort portfolio
+|     const sortedPortfolio = [
+
+Import trace for requested module:
+./components/portfolio/portfolio-page.tsx
+./app/(trading)/portfolio/page.tsx
+ ✓ Compiled in 744ms (850 modules)
+ ✓ Compiled in 303ms (848 modules)
+ ✓ Compiled in 227ms (848 modules)
+ ✓ Compiled in 292ms (848 modules)
+ ✓ Compiled in 1448ms (848 modules)
+ ✓ Compiled in 372ms (848 modules)
+ ✓ Compiled in 307ms (848 modules)
+ ✓ Compiled in 292ms (848 modules)
+ ✓ Compiled in 303ms (848 modules)
+ ✓ Compiled in 120ms (372 modules)
+ ✓ Compiled in 216ms (372 modules)
+ ✓ Compiled in 95ms (372 modules)
+ ✓ Compiled in 261ms (372 modules)
+ ✓ Compiled in 211ms (372 modules)
+ ✓ Compiled in 150ms (372 modules)
+ ✓ Compiled in 174ms (372 modules)
+ ✓ Compiled in 214ms (372 modules)
+ ✓ Compiled in 283ms (372 modules)
+ ✓ Compiled in 162ms (372 modules)
+ ✓ Compiled in 219ms (372 modules)
+ ✓ Compiled in 174ms (372 modules)
+ ✓ Compiled in 222ms (372 modules)
+ ✓ Compiled in 192ms (372 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/1.pack.gz_' -> '/Users/sanvadshende/Downloads/trado-main/.next/cache/webpack/client-development/1.pack.gz'
+ GET /screener 200 in 207ms
+ ✓ Compiled /api/screener in 449ms (494 modules)
+ ⨯ Error: Cannot find module './447.js'
+Require stack:
+- /Users/sanvadshende/Downloads/trado-main/.next/server/webpack-runtime.js
+- /Users/sanvadshende/Downloads/trado-main/.next/server/app/api/screener/route.js
+- /Users/sanvadshende/Downloads/trado-main/node_modules/next/dist/server/require.js
+- /Users/sanvadshende/Downloads/trado-main/node_modules/next/dist/server/load-components.js
+- /Users/sanvadshende/Downloads/trado-main/node_modules/next/dist/build/utils.js
+- /Users/sanvadshende/Downloads/trado-main/node_modules/next/dist/build/swc/options.js
+- /Users/sanvadshende/Downloads/trado-main/node_modules/next/dist/build/swc/index.js
+- /Users/sanvadshende/Downloads/trado-main/node_modules/next/dist/build/analysis/parse-module.js
+- /Users/sanvadshende/Downloads/trado-main/node_modules/next/dist/build/analysis/get-page-static-info.js
+- /Users/sanvadshende/Downloads/trado-main/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sanvadshende/Downloads/trado-main/node_modules/next/dist/server/lib/router-server.js
+- /Users/sanvadshende/Downloads/trado-main/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:203:28)
+    at <unknown> (.next/server/webpack-runtime.js:116:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:115:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:167:22)
+    at <unknown> (.next/server/app/(trading)/portfolio/page.js:1:19547)
+    at Object.<anonymous> (.next/server/app/(trading)/portfolio/page.js:1:19599) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/portfolio'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1002ms (1183 modules)
+ GET /api/screener?sortBy=rank&sortOrder=asc&limit=100 200 in 1815ms
+ GET /portfolio 500 in 2000ms
+ ✓ Compiled in 680ms (615 modules)
+ ✓ Compiled in 361ms (1136 modules)
+ ✓ Compiled in 225ms (615 modules)
+ ✓ Compiled in 296ms (1136 modules)
+ ✓ Compiled in 291ms (1136 modules)
+ ✓ Compiled in 280ms (1136 modules)
+ ✓ Compiled in 294ms (1136 modules)
+ ⨯ ./components/screener/screener-page.tsx
+Error:   [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:114:1]
+ [2m111[0m |       };
+ [2m112[0m |     
+ [2m113[0m |       if (loading) {
+ [2m114[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m     return (
+ [2m115[0m | [35;1m|[0m         <div className="flex-1 bg-black text-white flex items-center justify-center">
+ [2m116[0m | [35;1m|[0m           <div className="text-center">
+ [2m117[0m | [35;1m|[0m             <Loader2 className="w-16 h-16 text-blue-400 mx-auto mb-4 animate-spin" />
+ [2m118[0m | [35;1m|[0m             <h2 className="text-2xl font-bold mb-2">Loading Crypto Screener</h2>
+ [2m119[0m | [35;1m|[0m             <p className="text-zinc-400">Please wait while we fetch market data...</p>
+ [2m120[0m | [35;1m|[0m           </div>
+ [2m121[0m | [35;1m|[0m         </div>
+ [2m122[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m     );
+ [2m123[0m |       }
+ [2m124[0m |     
+ [2m125[0m |       if (error) {
+     `----
+  [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:126:1]
+ [2m123[0m |       }
+ [2m124[0m |     
+ [2m125[0m |       if (error) {
+ [2m126[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m     return (
+ [2m127[0m | [35;1m|[0m         <div className="flex-1 bg-black text-white flex items-center justify-center">
+ [2m128[0m | [35;1m|[0m           <div className="text-center">
+ [2m129[0m | [35;1m|[0m             <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+ [2m130[0m | [35;1m|[0m               <span className="text-white text-2xl">!</span>
+ [2m131[0m | [35;1m|[0m             </div>
+ [2m132[0m | [35;1m|[0m             <h2 className="text-2xl font-bold mb-2">Error Loading Screener</h2>
+ [2m133[0m | [35;1m|[0m             <p className="text-zinc-400 mb-4">{error}</p>
+ [2m134[0m | [35;1m|[0m             <button
+ [2m135[0m | [35;1m|[0m               onClick={() => loadScreenerData()}
+ [2m136[0m | [35;1m|[0m               className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m137[0m | [35;1m|[0m             >
+ [2m138[0m | [35;1m|[0m               Try Again
+ [2m139[0m | [35;1m|[0m             </button>
+ [2m140[0m | [35;1m|[0m           </div>
+ [2m141[0m | [35;1m|[0m         </div>
+ [2m142[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m     );
+ [2m143[0m |       }
+ [2m144[0m |     
+ [2m145[0m |       return (
+     `----
+  [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:145:1]
+ [2m142[0m |         );
+ [2m143[0m |       }
+ [2m144[0m |     
+ [2m145[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m   return (
+ [2m146[0m | [35;1m|[0m       <div className="flex-1 bg-black text-white p-6">
+ [2m147[0m | [35;1m|[0m         {/* Header */}
+ [2m148[0m | [35;1m|[0m         <div className="mb-8 flex justify-between items-start">
+ [2m149[0m | [35;1m|[0m           <div>
+ [2m150[0m | [35;1m|[0m             <h1 className="text-3xl font-bold mb-2">Crypto Screener</h1>
+ [2m151[0m | [35;1m|[0m             <p className="text-zinc-400">Discover and analyze cryptocurrency markets</p>
+ [2m152[0m | [35;1m|[0m           </div>
+ [2m153[0m | [35;1m|[0m           <button
+ [2m154[0m | [35;1m|[0m             onClick={() => loadScreenerData()}
+ [2m155[0m | [35;1m|[0m             className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m156[0m | [35;1m|[0m           >
+ [2m157[0m | [35;1m|[0m             <RefreshCw className="w-4 h-4" />
+ [2m158[0m | [35;1m|[0m             Refresh
+ [2m159[0m | [35;1m|[0m           </button>
+ [2m160[0m | [35;1m|[0m         </div>
+ [2m161[0m | [35;1m|[0m   
+ [2m162[0m | [35;1m|[0m         {/* Filters */}
+ [2m163[0m | [35;1m|[0m         <div className="mb-6 flex flex-wrap gap-4 items-center">
+ [2m164[0m | [35;1m|[0m           {/* Blockchain Filter */}
+ [2m165[0m | [35;1m|[0m           <div className="flex gap-2">
+ [2m166[0m | [35;1m|[0m             {blockchains.map(blockchain => (
+ [2m167[0m | [35;1m|[0m               <button
+ [2m168[0m | [35;1m|[0m                 key={blockchain.id}
+ [2m169[0m | [35;1m|[0m                 onClick={() => setSelectedBlockchain(blockchain.id)}
+ [2m170[0m | [35;1m|[0m                 className={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${
+ [2m171[0m | [35;1m|[0m                   selectedBlockchain === blockchain.id
+ [2m172[0m | [35;1m|[0m                     ? 'bg-blue-600 text-white'
+ [2m173[0m | [35;1m|[0m                     : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+ [2m174[0m | [35;1m|[0m                 }`}
+ [2m175[0m | [35;1m|[0m               >
+ [2m176[0m | [35;1m|[0m                 <span>{blockchain.icon}</span>
+ [2m177[0m | [35;1m|[0m                 {blockchain.name}
+ [2m178[0m | [35;1m|[0m               </button>
+ [2m179[0m | [35;1m|[0m             ))}
+ [2m180[0m | [35;1m|[0m           </div>
+ [2m181[0m | [35;1m|[0m   
+ [2m182[0m | [35;1m|[0m           {/* Search */}
+ [2m183[0m | [35;1m|[0m           <div className="relative flex-1 max-w-md">
+ [2m184[0m | [35;1m|[0m             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
+ [2m185[0m | [35;1m|[0m             <input
+ [2m186[0m | [35;1m|[0m               type="text"
+ [2m187[0m | [35;1m|[0m               placeholder="Search coins..."
+ [2m188[0m | [35;1m|[0m               value={searchTerm}
+ [2m189[0m | [35;1m|[0m               onChange={(e) => setSearchTerm(e.target.value)}
+ [2m190[0m | [35;1m|[0m               className="w-full bg-zinc-800 text-white pl-10 pr-4 py-2 rounded-lg border border-zinc-700 focus:border-blue-500 focus:outline-none"
+ [2m191[0m | [35;1m|[0m             />
+ [2m192[0m | [35;1m|[0m           </div>
+ [2m193[0m | [35;1m|[0m   
+ [2m194[0m | [35;1m|[0m           {/* Filter Button */}
+ [2m195[0m | [35;1m|[0m           <button
+ [2m196[0m | [35;1m|[0m             onClick={() => setShowFilters(!showFilters)}
+ [2m197[0m | [35;1m|[0m             className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m198[0m | [35;1m|[0m           >
+ [2m199[0m | [35;1m|[0m             <Filter className="w-4 h-4" />
+ [2m200[0m | [35;1m|[0m             Filters
+ [2m201[0m | [35;1m|[0m           </button>
+ [2m202[0m | [35;1m|[0m         </div>
+ [2m203[0m | [35;1m|[0m   
+ [2m204[0m | [35;1m|[0m         {/* Results Count */}
+ [2m205[0m | [35;1m|[0m         <div className="mb-4 flex items-center gap-4">
+ [2m206[0m | [35;1m|[0m           <p className="text-zinc-400">
+ [2m207[0m | [35;1m|[0m             Showing {filteredCoins.length} coins
+ [2m208[0m | [35;1m|[0m           </p>
+ [2m209[0m | [35;1m|[0m           {selectedBlockchain !== 'all' && (
+ [2m210[0m | [35;1m|[0m             <span className="text-sm text-blue-400">
+ [2m211[0m | [35;1m|[0m               Filtered by {blockchains.find(b => b.id === selectedBlockchain)?.name}
+ [2m212[0m | [35;1m|[0m             </span>
+ [2m213[0m | [35;1m|[0m           )}
+ [2m214[0m | [35;1m|[0m         </div>
+ [2m215[0m | [35;1m|[0m   
+ [2m216[0m | [35;1m|[0m         {/* Coins Table */}
+ [2m217[0m | [35;1m|[0m         <div className="bg-zinc-900 rounded-lg border border-zinc-800 overflow-hidden">
+ [2m218[0m | [35;1m|[0m           <div className="overflow-x-auto">
+ [2m219[0m | [35;1m|[0m             <table className="w-full">
+ [2m220[0m | [35;1m|[0m               <thead>
+ [2m221[0m | [35;1m|[0m                 <tr className="text-zinc-400 text-sm border-b border-zinc-800">
+ [2m222[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m223[0m | [35;1m|[0m                     <button
+ [2m224[0m | [35;1m|[0m                       onClick={() => handleSort('rank')}
+ [2m225[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m226[0m | [35;1m|[0m                     >
+ [2m227[0m | [35;1m|[0m                       RANK
+ [2m228[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m229[0m | [35;1m|[0m                     </button>
+ [2m230[0m | [35;1m|[0m                   </th>
+ [2m231[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">COIN</th>
+ [2m232[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m233[0m | [35;1m|[0m                     <button
+ [2m234[0m | [35;1m|[0m                       onClick={() => handleSort('price')}
+ [2m235[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m236[0m | [35;1m|[0m                     >
+ [2m237[0m | [35;1m|[0m                       PRICE
+ [2m238[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m239[0m | [35;1m|[0m                     </button>
+ [2m240[0m | [35;1m|[0m                   </th>
+ [2m241[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m242[0m | [35;1m|[0m                     <button
+ [2m243[0m | [35;1m|[0m                       onClick={() => handleSort('change24h')}
+ [2m244[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m245[0m | [35;1m|[0m                     >
+ [2m246[0m | [35;1m|[0m                       24H CHANGE
+ [2m247[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m248[0m | [35;1m|[0m                     </button>
+ [2m249[0m | [35;1m|[0m                   </th>
+ [2m250[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m251[0m | [35;1m|[0m                     <button
+ [2m252[0m | [35;1m|[0m                       onClick={() => handleSort('volume24h')}
+ [2m253[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m254[0m | [35;1m|[0m                     >
+ [2m255[0m | [35;1m|[0m                       24H VOLUME
+ [2m256[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m257[0m | [35;1m|[0m                     </button>
+ [2m258[0m | [35;1m|[0m                   </th>
+ [2m259[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m260[0m | [35;1m|[0m                     <button
+ [2m261[0m | [35;1m|[0m                       onClick={() => handleSort('marketCap')}
+ [2m262[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m263[0m | [35;1m|[0m                     >
+ [2m264[0m | [35;1m|[0m                       MARKET CAP
+ [2m265[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m266[0m | [35;1m|[0m                     </button>
+ [2m267[0m | [35;1m|[0m                   </th>
+ [2m268[0m | [35;1m|[0m                   {isAuthenticated && (
+ [2m269[0m | [35;1m|[0m                     <th className="text-left p-4 font-medium">ACTION</th>
+ [2m270[0m | [35;1m|[0m                   )}
+ [2m271[0m | [35;1m|[0m                 </tr>
+ [2m272[0m | [35;1m|[0m               </thead>
+ [2m273[0m | [35;1m|[0m               <tbody>
+ [2m274[0m | [35;1m|[0m                 {filteredCoins.map((coin) => (
+ [2m275[0m | [35;1m|[0m                   <tr key={coin.id} className="border-b border-zinc-800 hover:bg-zinc-800/50 cursor-pointer">
+ [2m276[0m | [35;1m|[0m                     <td className="p-4">
+ [2m277[0m | [35;1m|[0m                       <span className="text-zinc-400 font-medium">#{coin.rank}</span>
+ [2m278[0m | [35;1m|[0m                     </td>
+ [2m279[0m | [35;1m|[0m                     <td className="p-4">
+ [2m280[0m | [35;1m|[0m                       <div className="flex items-center gap-3">
+ [2m281[0m | [35;1m|[0m                         {coin.image ? (
+ [2m282[0m | [35;1m|[0m                           <img
+ [2m283[0m | [35;1m|[0m                             src={coin.image}
+ [2m284[0m | [35;1m|[0m                             alt={coin.name}
+ [2m285[0m | [35;1m|[0m                             className="w-8 h-8 rounded-full"
+ [2m286[0m | [35;1m|[0m                           />
+ [2m287[0m | [35;1m|[0m                         ) : (
+ [2m288[0m | [35;1m|[0m                           <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">
+ [2m289[0m | [35;1m|[0m                             <span className="text-xs font-medium text-white">
+ [2m290[0m | [35;1m|[0m                               {coin.symbol.slice(0, 2).toUpperCase()}
+ [2m291[0m | [35;1m|[0m                             </span>
+ [2m292[0m | [35;1m|[0m                           </div>
+ [2m293[0m | [35;1m|[0m                         )}
+ [2m294[0m | [35;1m|[0m                         <div>
+ [2m295[0m | [35;1m|[0m                           <p className="font-medium text-white">{coin.symbol}</p>
+ [2m296[0m | [35;1m|[0m                           <p className="text-sm text-zinc-400">{coin.name}</p>
+ [2m297[0m | [35;1m|[0m                         </div>
+ [2m298[0m | [35;1m|[0m                       </div>
+ [2m299[0m | [35;1m|[0m                     </td>
+ [2m300[0m | [35;1m|[0m                     <td className="p-4">
+ [2m301[0m | [35;1m|[0m                       <p className="text-white font-medium">{formatPrice(coin.price)}</p>
+ [2m302[0m | [35;1m|[0m                     </td>
+ [2m303[0m | [35;1m|[0m                     <td className="p-4">
+ [2m304[0m | [35;1m|[0m                       <div className="flex items-center gap-1">
+ [2m305[0m | [35;1m|[0m                         {(coin.change24h || 0) >= 0 ? (
+ [2m306[0m | [35;1m|[0m                           <TrendingUp className="w-3 h-3 text-green-400" />
+ [2m307[0m | [35;1m|[0m                         ) : (
+ [2m308[0m | [35;1m|[0m                           <TrendingDown className="w-3 h-3 text-red-400" />
+ [2m309[0m | [35;1m|[0m                         )}
+ [2m310[0m | [35;1m|[0m                         <p className={`font-medium ${
+ [2m311[0m | [35;1m|[0m                           (coin.change24h || 0) >= 0 ? 'text-green-400' : 'text-red-400'
+ [2m312[0m | [35;1m|[0m                         }`}>
+ [2m313[0m | [35;1m|[0m                           {(coin.change24h || 0) >= 0 ? '+' : ''}{coin.change24h?.toFixed(2) || '0.00'}%
+ [2m314[0m | [35;1m|[0m                         </p>
+ [2m315[0m | [35;1m|[0m                       </div>
+ [2m316[0m | [35;1m|[0m                     </td>
+ [2m317[0m | [35;1m|[0m                     <td className="p-4">
+ [2m318[0m | [35;1m|[0m                       <p className="text-white">{formatCurrency(coin.volume24h)}</p>
+ [2m319[0m | [35;1m|[0m                     </td>
+ [2m320[0m | [35;1m|[0m                     <td className="p-4">
+ [2m321[0m | [35;1m|[0m                       <p className="text-white">{formatCurrency(coin.marketCap)}</p>
+ [2m322[0m | [35;1m|[0m                     </td>
+ [2m323[0m | [35;1m|[0m                     {isAuthenticated && (
+ [2m324[0m | [35;1m|[0m                       <td className="p-4">
+ [2m325[0m | [35;1m|[0m                         <button
+ [2m326[0m | [35;1m|[0m                           onClick={() => handleBuy(coin)}
+ [2m327[0m | [35;1m|[0m                           className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-sm font-medium transition-colors"
+ [2m328[0m | [35;1m|[0m                         >
+ [2m329[0m | [35;1m|[0m                           <ShoppingCart className="w-3 h-3" />
+ [2m330[0m | [35;1m|[0m                           Buy
+ [2m331[0m | [35;1m|[0m                         </button>
+ [2m332[0m | [35;1m|[0m                       </td>
+ [2m333[0m | [35;1m|[0m                     )}
+ [2m334[0m | [35;1m|[0m                   </tr>
+ [2m335[0m | [35;1m|[0m                 ))}
+ [2m336[0m | [35;1m|[0m               </tbody>
+ [2m337[0m | [35;1m|[0m             </table>
+ [2m338[0m | [35;1m|[0m           </div>
+ [2m339[0m | [35;1m|[0m         </div>
+ [2m340[0m | [35;1m|[0m   
+ [2m341[0m | [35;1m|[0m         {filteredCoins.length === 0 && !loading && (
+ [2m342[0m | [35;1m|[0m           <div className="text-center py-12">
+ [2m343[0m | [35;1m|[0m             <BarChart3 className="w-16 h-16 text-zinc-400 mx-auto mb-4" />
+ [2m344[0m | [35;1m|[0m             <h3 className="text-lg font-semibold mb-2">No coins found</h3>
+ [2m345[0m | [35;1m|[0m             <p className="text-zinc-400">Try adjusting your search or filters</p>
+ [2m346[0m | [35;1m|[0m           </div>
+ [2m347[0m | [35;1m|[0m         )}
+ [2m348[0m | [35;1m|[0m   
+ [2m349[0m | [35;1m|[0m         {selectedCoin && (
+ [2m350[0m | [35;1m|[0m           <BuyModal
+ [2m351[0m | [35;1m|[0m             isOpen={showBuyModal}
+ [2m352[0m | [35;1m|[0m             onClose={() => setShowBuyModal(false)}
+ [2m353[0m | [35;1m|[0m             coin={selectedCoin}
+ [2m354[0m | [35;1m|[0m           />
+ [2m355[0m | [35;1m|[0m         )}
+ [2m356[0m | [35;1m|[0m       </div>
+ [2m357[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m   );
+ [2m358[0m |     }
+     `----
+  [31mx[0m Expression expected
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:358:1]
+ [2m355[0m |       )}
+ [2m356[0m |     </div>
+ [2m357[0m |   );
+ [2m358[0m | }
+     : [35;1m^[0m
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/screener/screener-page.tsx
+./app/(trading)/screener/page.tsx
+ ⨯ ./components/screener/screener-page.tsx
+Error:   [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:114:1]
+ [2m111[0m |       };
+ [2m112[0m |     
+ [2m113[0m |       if (loading) {
+ [2m114[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m     return (
+ [2m115[0m | [35;1m|[0m         <div className="flex-1 bg-black text-white flex items-center justify-center">
+ [2m116[0m | [35;1m|[0m           <div className="text-center">
+ [2m117[0m | [35;1m|[0m             <Loader2 className="w-16 h-16 text-blue-400 mx-auto mb-4 animate-spin" />
+ [2m118[0m | [35;1m|[0m             <h2 className="text-2xl font-bold mb-2">Loading Crypto Screener</h2>
+ [2m119[0m | [35;1m|[0m             <p className="text-zinc-400">Please wait while we fetch market data...</p>
+ [2m120[0m | [35;1m|[0m           </div>
+ [2m121[0m | [35;1m|[0m         </div>
+ [2m122[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m     );
+ [2m123[0m |       }
+ [2m124[0m |     
+ [2m125[0m |       if (error) {
+     `----
+  [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:126:1]
+ [2m123[0m |       }
+ [2m124[0m |     
+ [2m125[0m |       if (error) {
+ [2m126[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m     return (
+ [2m127[0m | [35;1m|[0m         <div className="flex-1 bg-black text-white flex items-center justify-center">
+ [2m128[0m | [35;1m|[0m           <div className="text-center">
+ [2m129[0m | [35;1m|[0m             <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+ [2m130[0m | [35;1m|[0m               <span className="text-white text-2xl">!</span>
+ [2m131[0m | [35;1m|[0m             </div>
+ [2m132[0m | [35;1m|[0m             <h2 className="text-2xl font-bold mb-2">Error Loading Screener</h2>
+ [2m133[0m | [35;1m|[0m             <p className="text-zinc-400 mb-4">{error}</p>
+ [2m134[0m | [35;1m|[0m             <button
+ [2m135[0m | [35;1m|[0m               onClick={() => loadScreenerData()}
+ [2m136[0m | [35;1m|[0m               className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m137[0m | [35;1m|[0m             >
+ [2m138[0m | [35;1m|[0m               Try Again
+ [2m139[0m | [35;1m|[0m             </button>
+ [2m140[0m | [35;1m|[0m           </div>
+ [2m141[0m | [35;1m|[0m         </div>
+ [2m142[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m     );
+ [2m143[0m |       }
+ [2m144[0m |     
+ [2m145[0m |       return (
+     `----
+  [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:145:1]
+ [2m142[0m |         );
+ [2m143[0m |       }
+ [2m144[0m |     
+ [2m145[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m   return (
+ [2m146[0m | [35;1m|[0m       <div className="flex-1 bg-black text-white p-6">
+ [2m147[0m | [35;1m|[0m         {/* Header */}
+ [2m148[0m | [35;1m|[0m         <div className="mb-8 flex justify-between items-start">
+ [2m149[0m | [35;1m|[0m           <div>
+ [2m150[0m | [35;1m|[0m             <h1 className="text-3xl font-bold mb-2">Crypto Screener</h1>
+ [2m151[0m | [35;1m|[0m             <p className="text-zinc-400">Discover and analyze cryptocurrency markets</p>
+ [2m152[0m | [35;1m|[0m           </div>
+ [2m153[0m | [35;1m|[0m           <button
+ [2m154[0m | [35;1m|[0m             onClick={() => loadScreenerData()}
+ [2m155[0m | [35;1m|[0m             className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m156[0m | [35;1m|[0m           >
+ [2m157[0m | [35;1m|[0m             <RefreshCw className="w-4 h-4" />
+ [2m158[0m | [35;1m|[0m             Refresh
+ [2m159[0m | [35;1m|[0m           </button>
+ [2m160[0m | [35;1m|[0m         </div>
+ [2m161[0m | [35;1m|[0m   
+ [2m162[0m | [35;1m|[0m         {/* Filters */}
+ [2m163[0m | [35;1m|[0m         <div className="mb-6 flex flex-wrap gap-4 items-center">
+ [2m164[0m | [35;1m|[0m           {/* Blockchain Filter */}
+ [2m165[0m | [35;1m|[0m           <div className="flex gap-2">
+ [2m166[0m | [35;1m|[0m             {blockchains.map(blockchain => (
+ [2m167[0m | [35;1m|[0m               <button
+ [2m168[0m | [35;1m|[0m                 key={blockchain.id}
+ [2m169[0m | [35;1m|[0m                 onClick={() => setSelectedBlockchain(blockchain.id)}
+ [2m170[0m | [35;1m|[0m                 className={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${
+ [2m171[0m | [35;1m|[0m                   selectedBlockchain === blockchain.id
+ [2m172[0m | [35;1m|[0m                     ? 'bg-blue-600 text-white'
+ [2m173[0m | [35;1m|[0m                     : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+ [2m174[0m | [35;1m|[0m                 }`}
+ [2m175[0m | [35;1m|[0m               >
+ [2m176[0m | [35;1m|[0m                 <span>{blockchain.icon}</span>
+ [2m177[0m | [35;1m|[0m                 {blockchain.name}
+ [2m178[0m | [35;1m|[0m               </button>
+ [2m179[0m | [35;1m|[0m             ))}
+ [2m180[0m | [35;1m|[0m           </div>
+ [2m181[0m | [35;1m|[0m   
+ [2m182[0m | [35;1m|[0m           {/* Search */}
+ [2m183[0m | [35;1m|[0m           <div className="relative flex-1 max-w-md">
+ [2m184[0m | [35;1m|[0m             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
+ [2m185[0m | [35;1m|[0m             <input
+ [2m186[0m | [35;1m|[0m               type="text"
+ [2m187[0m | [35;1m|[0m               placeholder="Search coins..."
+ [2m188[0m | [35;1m|[0m               value={searchTerm}
+ [2m189[0m | [35;1m|[0m               onChange={(e) => setSearchTerm(e.target.value)}
+ [2m190[0m | [35;1m|[0m               className="w-full bg-zinc-800 text-white pl-10 pr-4 py-2 rounded-lg border border-zinc-700 focus:border-blue-500 focus:outline-none"
+ [2m191[0m | [35;1m|[0m             />
+ [2m192[0m | [35;1m|[0m           </div>
+ [2m193[0m | [35;1m|[0m   
+ [2m194[0m | [35;1m|[0m           {/* Filter Button */}
+ [2m195[0m | [35;1m|[0m           <button
+ [2m196[0m | [35;1m|[0m             onClick={() => setShowFilters(!showFilters)}
+ [2m197[0m | [35;1m|[0m             className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m198[0m | [35;1m|[0m           >
+ [2m199[0m | [35;1m|[0m             <Filter className="w-4 h-4" />
+ [2m200[0m | [35;1m|[0m             Filters
+ [2m201[0m | [35;1m|[0m           </button>
+ [2m202[0m | [35;1m|[0m         </div>
+ [2m203[0m | [35;1m|[0m   
+ [2m204[0m | [35;1m|[0m         {/* Results Count */}
+ [2m205[0m | [35;1m|[0m         <div className="mb-4 flex items-center gap-4">
+ [2m206[0m | [35;1m|[0m           <p className="text-zinc-400">
+ [2m207[0m | [35;1m|[0m             Showing {filteredCoins.length} coins
+ [2m208[0m | [35;1m|[0m           </p>
+ [2m209[0m | [35;1m|[0m           {selectedBlockchain !== 'all' && (
+ [2m210[0m | [35;1m|[0m             <span className="text-sm text-blue-400">
+ [2m211[0m | [35;1m|[0m               Filtered by {blockchains.find(b => b.id === selectedBlockchain)?.name}
+ [2m212[0m | [35;1m|[0m             </span>
+ [2m213[0m | [35;1m|[0m           )}
+ [2m214[0m | [35;1m|[0m         </div>
+ [2m215[0m | [35;1m|[0m   
+ [2m216[0m | [35;1m|[0m         {/* Coins Table */}
+ [2m217[0m | [35;1m|[0m         <div className="bg-zinc-900 rounded-lg border border-zinc-800 overflow-hidden">
+ [2m218[0m | [35;1m|[0m           <div className="overflow-x-auto">
+ [2m219[0m | [35;1m|[0m             <table className="w-full">
+ [2m220[0m | [35;1m|[0m               <thead>
+ [2m221[0m | [35;1m|[0m                 <tr className="text-zinc-400 text-sm border-b border-zinc-800">
+ [2m222[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m223[0m | [35;1m|[0m                     <button
+ [2m224[0m | [35;1m|[0m                       onClick={() => handleSort('rank')}
+ [2m225[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m226[0m | [35;1m|[0m                     >
+ [2m227[0m | [35;1m|[0m                       RANK
+ [2m228[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m229[0m | [35;1m|[0m                     </button>
+ [2m230[0m | [35;1m|[0m                   </th>
+ [2m231[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">COIN</th>
+ [2m232[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m233[0m | [35;1m|[0m                     <button
+ [2m234[0m | [35;1m|[0m                       onClick={() => handleSort('price')}
+ [2m235[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m236[0m | [35;1m|[0m                     >
+ [2m237[0m | [35;1m|[0m                       PRICE
+ [2m238[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m239[0m | [35;1m|[0m                     </button>
+ [2m240[0m | [35;1m|[0m                   </th>
+ [2m241[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m242[0m | [35;1m|[0m                     <button
+ [2m243[0m | [35;1m|[0m                       onClick={() => handleSort('change24h')}
+ [2m244[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m245[0m | [35;1m|[0m                     >
+ [2m246[0m | [35;1m|[0m                       24H CHANGE
+ [2m247[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m248[0m | [35;1m|[0m                     </button>
+ [2m249[0m | [35;1m|[0m                   </th>
+ [2m250[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m251[0m | [35;1m|[0m                     <button
+ [2m252[0m | [35;1m|[0m                       onClick={() => handleSort('volume24h')}
+ [2m253[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m254[0m | [35;1m|[0m                     >
+ [2m255[0m | [35;1m|[0m                       24H VOLUME
+ [2m256[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m257[0m | [35;1m|[0m                     </button>
+ [2m258[0m | [35;1m|[0m                   </th>
+ [2m259[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m260[0m | [35;1m|[0m                     <button
+ [2m261[0m | [35;1m|[0m                       onClick={() => handleSort('marketCap')}
+ [2m262[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m263[0m | [35;1m|[0m                     >
+ [2m264[0m | [35;1m|[0m                       MARKET CAP
+ [2m265[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m266[0m | [35;1m|[0m                     </button>
+ [2m267[0m | [35;1m|[0m                   </th>
+ [2m268[0m | [35;1m|[0m                   {isAuthenticated && (
+ [2m269[0m | [35;1m|[0m                     <th className="text-left p-4 font-medium">ACTION</th>
+ [2m270[0m | [35;1m|[0m                   )}
+ [2m271[0m | [35;1m|[0m                 </tr>
+ [2m272[0m | [35;1m|[0m               </thead>
+ [2m273[0m | [35;1m|[0m               <tbody>
+ [2m274[0m | [35;1m|[0m                 {filteredCoins.map((coin) => (
+ [2m275[0m | [35;1m|[0m                   <tr key={coin.id} className="border-b border-zinc-800 hover:bg-zinc-800/50 cursor-pointer">
+ [2m276[0m | [35;1m|[0m                     <td className="p-4">
+ [2m277[0m | [35;1m|[0m                       <span className="text-zinc-400 font-medium">#{coin.rank}</span>
+ [2m278[0m | [35;1m|[0m                     </td>
+ [2m279[0m | [35;1m|[0m                     <td className="p-4">
+ [2m280[0m | [35;1m|[0m                       <div className="flex items-center gap-3">
+ [2m281[0m | [35;1m|[0m                         {coin.image ? (
+ [2m282[0m | [35;1m|[0m                           <img
+ [2m283[0m | [35;1m|[0m                             src={coin.image}
+ [2m284[0m | [35;1m|[0m                             alt={coin.name}
+ [2m285[0m | [35;1m|[0m                             className="w-8 h-8 rounded-full"
+ [2m286[0m | [35;1m|[0m                           />
+ [2m287[0m | [35;1m|[0m                         ) : (
+ [2m288[0m | [35;1m|[0m                           <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">
+ [2m289[0m | [35;1m|[0m                             <span className="text-xs font-medium text-white">
+ [2m290[0m | [35;1m|[0m                               {coin.symbol.slice(0, 2).toUpperCase()}
+ [2m291[0m | [35;1m|[0m                             </span>
+ [2m292[0m | [35;1m|[0m                           </div>
+ [2m293[0m | [35;1m|[0m                         )}
+ [2m294[0m | [35;1m|[0m                         <div>
+ [2m295[0m | [35;1m|[0m                           <p className="font-medium text-white">{coin.symbol}</p>
+ [2m296[0m | [35;1m|[0m                           <p className="text-sm text-zinc-400">{coin.name}</p>
+ [2m297[0m | [35;1m|[0m                         </div>
+ [2m298[0m | [35;1m|[0m                       </div>
+ [2m299[0m | [35;1m|[0m                     </td>
+ [2m300[0m | [35;1m|[0m                     <td className="p-4">
+ [2m301[0m | [35;1m|[0m                       <p className="text-white font-medium">{formatPrice(coin.price)}</p>
+ [2m302[0m | [35;1m|[0m                     </td>
+ [2m303[0m | [35;1m|[0m                     <td className="p-4">
+ [2m304[0m | [35;1m|[0m                       <div className="flex items-center gap-1">
+ [2m305[0m | [35;1m|[0m                         {(coin.change24h || 0) >= 0 ? (
+ [2m306[0m | [35;1m|[0m                           <TrendingUp className="w-3 h-3 text-green-400" />
+ [2m307[0m | [35;1m|[0m                         ) : (
+ [2m308[0m | [35;1m|[0m                           <TrendingDown className="w-3 h-3 text-red-400" />
+ [2m309[0m | [35;1m|[0m                         )}
+ [2m310[0m | [35;1m|[0m                         <p className={`font-medium ${
+ [2m311[0m | [35;1m|[0m                           (coin.change24h || 0) >= 0 ? 'text-green-400' : 'text-red-400'
+ [2m312[0m | [35;1m|[0m                         }`}>
+ [2m313[0m | [35;1m|[0m                           {(coin.change24h || 0) >= 0 ? '+' : ''}{coin.change24h?.toFixed(2) || '0.00'}%
+ [2m314[0m | [35;1m|[0m                         </p>
+ [2m315[0m | [35;1m|[0m                       </div>
+ [2m316[0m | [35;1m|[0m                     </td>
+ [2m317[0m | [35;1m|[0m                     <td className="p-4">
+ [2m318[0m | [35;1m|[0m                       <p className="text-white">{formatCurrency(coin.volume24h)}</p>
+ [2m319[0m | [35;1m|[0m                     </td>
+ [2m320[0m | [35;1m|[0m                     <td className="p-4">
+ [2m321[0m | [35;1m|[0m                       <p className="text-white">{formatCurrency(coin.marketCap)}</p>
+ [2m322[0m | [35;1m|[0m                     </td>
+ [2m323[0m | [35;1m|[0m                     {isAuthenticated && (
+ [2m324[0m | [35;1m|[0m                       <td className="p-4">
+ [2m325[0m | [35;1m|[0m                         <button
+ [2m326[0m | [35;1m|[0m                           onClick={() => handleBuy(coin)}
+ [2m327[0m | [35;1m|[0m                           className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-sm font-medium transition-colors"
+ [2m328[0m | [35;1m|[0m                         >
+ [2m329[0m | [35;1m|[0m                           <ShoppingCart className="w-3 h-3" />
+ [2m330[0m | [35;1m|[0m                           Buy
+ [2m331[0m | [35;1m|[0m                         </button>
+ [2m332[0m | [35;1m|[0m                       </td>
+ [2m333[0m | [35;1m|[0m                     )}
+ [2m334[0m | [35;1m|[0m                   </tr>
+ [2m335[0m | [35;1m|[0m                 ))}
+ [2m336[0m | [35;1m|[0m               </tbody>
+ [2m337[0m | [35;1m|[0m             </table>
+ [2m338[0m | [35;1m|[0m           </div>
+ [2m339[0m | [35;1m|[0m         </div>
+ [2m340[0m | [35;1m|[0m   
+ [2m341[0m | [35;1m|[0m         {filteredCoins.length === 0 && !loading && (
+ [2m342[0m | [35;1m|[0m           <div className="text-center py-12">
+ [2m343[0m | [35;1m|[0m             <BarChart3 className="w-16 h-16 text-zinc-400 mx-auto mb-4" />
+ [2m344[0m | [35;1m|[0m             <h3 className="text-lg font-semibold mb-2">No coins found</h3>
+ [2m345[0m | [35;1m|[0m             <p className="text-zinc-400">Try adjusting your search or filters</p>
+ [2m346[0m | [35;1m|[0m           </div>
+ [2m347[0m | [35;1m|[0m         )}
+ [2m348[0m | [35;1m|[0m   
+ [2m349[0m | [35;1m|[0m         {selectedCoin && (
+ [2m350[0m | [35;1m|[0m           <BuyModal
+ [2m351[0m | [35;1m|[0m             isOpen={showBuyModal}
+ [2m352[0m | [35;1m|[0m             onClose={() => setShowBuyModal(false)}
+ [2m353[0m | [35;1m|[0m             coin={selectedCoin}
+ [2m354[0m | [35;1m|[0m           />
+ [2m355[0m | [35;1m|[0m         )}
+ [2m356[0m | [35;1m|[0m       </div>
+ [2m357[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m   );
+ [2m358[0m |     }
+     `----
+  [31mx[0m Expression expected
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:358:1]
+ [2m355[0m |       )}
+ [2m356[0m |     </div>
+ [2m357[0m |   );
+ [2m358[0m | }
+     : [35;1m^[0m
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/screener/screener-page.tsx
+./app/(trading)/screener/page.tsx
+ ⨯ ./components/screener/screener-page.tsx
+Error:   [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:114:1]
+ [2m111[0m |       };
+ [2m112[0m |     
+ [2m113[0m |       if (loading) {
+ [2m114[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m     return (
+ [2m115[0m | [35;1m|[0m         <div className="flex-1 bg-black text-white flex items-center justify-center">
+ [2m116[0m | [35;1m|[0m           <div className="text-center">
+ [2m117[0m | [35;1m|[0m             <Loader2 className="w-16 h-16 text-blue-400 mx-auto mb-4 animate-spin" />
+ [2m118[0m | [35;1m|[0m             <h2 className="text-2xl font-bold mb-2">Loading Crypto Screener</h2>
+ [2m119[0m | [35;1m|[0m             <p className="text-zinc-400">Please wait while we fetch market data...</p>
+ [2m120[0m | [35;1m|[0m           </div>
+ [2m121[0m | [35;1m|[0m         </div>
+ [2m122[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m     );
+ [2m123[0m |       }
+ [2m124[0m |     
+ [2m125[0m |       if (error) {
+     `----
+  [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:126:1]
+ [2m123[0m |       }
+ [2m124[0m |     
+ [2m125[0m |       if (error) {
+ [2m126[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m     return (
+ [2m127[0m | [35;1m|[0m         <div className="flex-1 bg-black text-white flex items-center justify-center">
+ [2m128[0m | [35;1m|[0m           <div className="text-center">
+ [2m129[0m | [35;1m|[0m             <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+ [2m130[0m | [35;1m|[0m               <span className="text-white text-2xl">!</span>
+ [2m131[0m | [35;1m|[0m             </div>
+ [2m132[0m | [35;1m|[0m             <h2 className="text-2xl font-bold mb-2">Error Loading Screener</h2>
+ [2m133[0m | [35;1m|[0m             <p className="text-zinc-400 mb-4">{error}</p>
+ [2m134[0m | [35;1m|[0m             <button
+ [2m135[0m | [35;1m|[0m               onClick={() => loadScreenerData()}
+ [2m136[0m | [35;1m|[0m               className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m137[0m | [35;1m|[0m             >
+ [2m138[0m | [35;1m|[0m               Try Again
+ [2m139[0m | [35;1m|[0m             </button>
+ [2m140[0m | [35;1m|[0m           </div>
+ [2m141[0m | [35;1m|[0m         </div>
+ [2m142[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m     );
+ [2m143[0m |       }
+ [2m144[0m |     
+ [2m145[0m |       return (
+     `----
+  [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:145:1]
+ [2m142[0m |         );
+ [2m143[0m |       }
+ [2m144[0m |     
+ [2m145[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m   return (
+ [2m146[0m | [35;1m|[0m       <div className="flex-1 bg-black text-white p-6">
+ [2m147[0m | [35;1m|[0m         {/* Header */}
+ [2m148[0m | [35;1m|[0m         <div className="mb-8 flex justify-between items-start">
+ [2m149[0m | [35;1m|[0m           <div>
+ [2m150[0m | [35;1m|[0m             <h1 className="text-3xl font-bold mb-2">Crypto Screener</h1>
+ [2m151[0m | [35;1m|[0m             <p className="text-zinc-400">Discover and analyze cryptocurrency markets</p>
+ [2m152[0m | [35;1m|[0m           </div>
+ [2m153[0m | [35;1m|[0m           <button
+ [2m154[0m | [35;1m|[0m             onClick={() => loadScreenerData()}
+ [2m155[0m | [35;1m|[0m             className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m156[0m | [35;1m|[0m           >
+ [2m157[0m | [35;1m|[0m             <RefreshCw className="w-4 h-4" />
+ [2m158[0m | [35;1m|[0m             Refresh
+ [2m159[0m | [35;1m|[0m           </button>
+ [2m160[0m | [35;1m|[0m         </div>
+ [2m161[0m | [35;1m|[0m   
+ [2m162[0m | [35;1m|[0m         {/* Filters */}
+ [2m163[0m | [35;1m|[0m         <div className="mb-6 flex flex-wrap gap-4 items-center">
+ [2m164[0m | [35;1m|[0m           {/* Blockchain Filter */}
+ [2m165[0m | [35;1m|[0m           <div className="flex gap-2">
+ [2m166[0m | [35;1m|[0m             {blockchains.map(blockchain => (
+ [2m167[0m | [35;1m|[0m               <button
+ [2m168[0m | [35;1m|[0m                 key={blockchain.id}
+ [2m169[0m | [35;1m|[0m                 onClick={() => setSelectedBlockchain(blockchain.id)}
+ [2m170[0m | [35;1m|[0m                 className={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${
+ [2m171[0m | [35;1m|[0m                   selectedBlockchain === blockchain.id
+ [2m172[0m | [35;1m|[0m                     ? 'bg-blue-600 text-white'
+ [2m173[0m | [35;1m|[0m                     : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+ [2m174[0m | [35;1m|[0m                 }`}
+ [2m175[0m | [35;1m|[0m               >
+ [2m176[0m | [35;1m|[0m                 <span>{blockchain.icon}</span>
+ [2m177[0m | [35;1m|[0m                 {blockchain.name}
+ [2m178[0m | [35;1m|[0m               </button>
+ [2m179[0m | [35;1m|[0m             ))}
+ [2m180[0m | [35;1m|[0m           </div>
+ [2m181[0m | [35;1m|[0m   
+ [2m182[0m | [35;1m|[0m           {/* Search */}
+ [2m183[0m | [35;1m|[0m           <div className="relative flex-1 max-w-md">
+ [2m184[0m | [35;1m|[0m             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
+ [2m185[0m | [35;1m|[0m             <input
+ [2m186[0m | [35;1m|[0m               type="text"
+ [2m187[0m | [35;1m|[0m               placeholder="Search coins..."
+ [2m188[0m | [35;1m|[0m               value={searchTerm}
+ [2m189[0m | [35;1m|[0m               onChange={(e) => setSearchTerm(e.target.value)}
+ [2m190[0m | [35;1m|[0m               className="w-full bg-zinc-800 text-white pl-10 pr-4 py-2 rounded-lg border border-zinc-700 focus:border-blue-500 focus:outline-none"
+ [2m191[0m | [35;1m|[0m             />
+ [2m192[0m | [35;1m|[0m           </div>
+ [2m193[0m | [35;1m|[0m   
+ [2m194[0m | [35;1m|[0m           {/* Filter Button */}
+ [2m195[0m | [35;1m|[0m           <button
+ [2m196[0m | [35;1m|[0m             onClick={() => setShowFilters(!showFilters)}
+ [2m197[0m | [35;1m|[0m             className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m198[0m | [35;1m|[0m           >
+ [2m199[0m | [35;1m|[0m             <Filter className="w-4 h-4" />
+ [2m200[0m | [35;1m|[0m             Filters
+ [2m201[0m | [35;1m|[0m           </button>
+ [2m202[0m | [35;1m|[0m         </div>
+ [2m203[0m | [35;1m|[0m   
+ [2m204[0m | [35;1m|[0m         {/* Results Count */}
+ [2m205[0m | [35;1m|[0m         <div className="mb-4 flex items-center gap-4">
+ [2m206[0m | [35;1m|[0m           <p className="text-zinc-400">
+ [2m207[0m | [35;1m|[0m             Showing {filteredCoins.length} coins
+ [2m208[0m | [35;1m|[0m           </p>
+ [2m209[0m | [35;1m|[0m           {selectedBlockchain !== 'all' && (
+ [2m210[0m | [35;1m|[0m             <span className="text-sm text-blue-400">
+ [2m211[0m | [35;1m|[0m               Filtered by {blockchains.find(b => b.id === selectedBlockchain)?.name}
+ [2m212[0m | [35;1m|[0m             </span>
+ [2m213[0m | [35;1m|[0m           )}
+ [2m214[0m | [35;1m|[0m         </div>
+ [2m215[0m | [35;1m|[0m   
+ [2m216[0m | [35;1m|[0m         {/* Coins Table */}
+ [2m217[0m | [35;1m|[0m         <div className="bg-zinc-900 rounded-lg border border-zinc-800 overflow-hidden">
+ [2m218[0m | [35;1m|[0m           <div className="overflow-x-auto">
+ [2m219[0m | [35;1m|[0m             <table className="w-full">
+ [2m220[0m | [35;1m|[0m               <thead>
+ [2m221[0m | [35;1m|[0m                 <tr className="text-zinc-400 text-sm border-b border-zinc-800">
+ [2m222[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m223[0m | [35;1m|[0m                     <button
+ [2m224[0m | [35;1m|[0m                       onClick={() => handleSort('rank')}
+ [2m225[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m226[0m | [35;1m|[0m                     >
+ [2m227[0m | [35;1m|[0m                       RANK
+ [2m228[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m229[0m | [35;1m|[0m                     </button>
+ [2m230[0m | [35;1m|[0m                   </th>
+ [2m231[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">COIN</th>
+ [2m232[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m233[0m | [35;1m|[0m                     <button
+ [2m234[0m | [35;1m|[0m                       onClick={() => handleSort('price')}
+ [2m235[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m236[0m | [35;1m|[0m                     >
+ [2m237[0m | [35;1m|[0m                       PRICE
+ [2m238[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m239[0m | [35;1m|[0m                     </button>
+ [2m240[0m | [35;1m|[0m                   </th>
+ [2m241[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m242[0m | [35;1m|[0m                     <button
+ [2m243[0m | [35;1m|[0m                       onClick={() => handleSort('change24h')}
+ [2m244[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m245[0m | [35;1m|[0m                     >
+ [2m246[0m | [35;1m|[0m                       24H CHANGE
+ [2m247[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m248[0m | [35;1m|[0m                     </button>
+ [2m249[0m | [35;1m|[0m                   </th>
+ [2m250[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m251[0m | [35;1m|[0m                     <button
+ [2m252[0m | [35;1m|[0m                       onClick={() => handleSort('volume24h')}
+ [2m253[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m254[0m | [35;1m|[0m                     >
+ [2m255[0m | [35;1m|[0m                       24H VOLUME
+ [2m256[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m257[0m | [35;1m|[0m                     </button>
+ [2m258[0m | [35;1m|[0m                   </th>
+ [2m259[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m260[0m | [35;1m|[0m                     <button
+ [2m261[0m | [35;1m|[0m                       onClick={() => handleSort('marketCap')}
+ [2m262[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m263[0m | [35;1m|[0m                     >
+ [2m264[0m | [35;1m|[0m                       MARKET CAP
+ [2m265[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m266[0m | [35;1m|[0m                     </button>
+ [2m267[0m | [35;1m|[0m                   </th>
+ [2m268[0m | [35;1m|[0m                   {isAuthenticated && (
+ [2m269[0m | [35;1m|[0m                     <th className="text-left p-4 font-medium">ACTION</th>
+ [2m270[0m | [35;1m|[0m                   )}
+ [2m271[0m | [35;1m|[0m                 </tr>
+ [2m272[0m | [35;1m|[0m               </thead>
+ [2m273[0m | [35;1m|[0m               <tbody>
+ [2m274[0m | [35;1m|[0m                 {filteredCoins.map((coin) => (
+ [2m275[0m | [35;1m|[0m                   <tr key={coin.id} className="border-b border-zinc-800 hover:bg-zinc-800/50 cursor-pointer">
+ [2m276[0m | [35;1m|[0m                     <td className="p-4">
+ [2m277[0m | [35;1m|[0m                       <span className="text-zinc-400 font-medium">#{coin.rank}</span>
+ [2m278[0m | [35;1m|[0m                     </td>
+ [2m279[0m | [35;1m|[0m                     <td className="p-4">
+ [2m280[0m | [35;1m|[0m                       <div className="flex items-center gap-3">
+ [2m281[0m | [35;1m|[0m                         {coin.image ? (
+ [2m282[0m | [35;1m|[0m                           <img
+ [2m283[0m | [35;1m|[0m                             src={coin.image}
+ [2m284[0m | [35;1m|[0m                             alt={coin.name}
+ [2m285[0m | [35;1m|[0m                             className="w-8 h-8 rounded-full"
+ [2m286[0m | [35;1m|[0m                           />
+ [2m287[0m | [35;1m|[0m                         ) : (
+ [2m288[0m | [35;1m|[0m                           <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">
+ [2m289[0m | [35;1m|[0m                             <span className="text-xs font-medium text-white">
+ [2m290[0m | [35;1m|[0m                               {coin.symbol.slice(0, 2).toUpperCase()}
+ [2m291[0m | [35;1m|[0m                             </span>
+ [2m292[0m | [35;1m|[0m                           </div>
+ [2m293[0m | [35;1m|[0m                         )}
+ [2m294[0m | [35;1m|[0m                         <div>
+ [2m295[0m | [35;1m|[0m                           <p className="font-medium text-white">{coin.symbol}</p>
+ [2m296[0m | [35;1m|[0m                           <p className="text-sm text-zinc-400">{coin.name}</p>
+ [2m297[0m | [35;1m|[0m                         </div>
+ [2m298[0m | [35;1m|[0m                       </div>
+ [2m299[0m | [35;1m|[0m                     </td>
+ [2m300[0m | [35;1m|[0m                     <td className="p-4">
+ [2m301[0m | [35;1m|[0m                       <p className="text-white font-medium">{formatPrice(coin.price)}</p>
+ [2m302[0m | [35;1m|[0m                     </td>
+ [2m303[0m | [35;1m|[0m                     <td className="p-4">
+ [2m304[0m | [35;1m|[0m                       <div className="flex items-center gap-1">
+ [2m305[0m | [35;1m|[0m                         {(coin.change24h || 0) >= 0 ? (
+ [2m306[0m | [35;1m|[0m                           <TrendingUp className="w-3 h-3 text-green-400" />
+ [2m307[0m | [35;1m|[0m                         ) : (
+ [2m308[0m | [35;1m|[0m                           <TrendingDown className="w-3 h-3 text-red-400" />
+ [2m309[0m | [35;1m|[0m                         )}
+ [2m310[0m | [35;1m|[0m                         <p className={`font-medium ${
+ [2m311[0m | [35;1m|[0m                           (coin.change24h || 0) >= 0 ? 'text-green-400' : 'text-red-400'
+ [2m312[0m | [35;1m|[0m                         }`}>
+ [2m313[0m | [35;1m|[0m                           {(coin.change24h || 0) >= 0 ? '+' : ''}{coin.change24h?.toFixed(2) || '0.00'}%
+ [2m314[0m | [35;1m|[0m                         </p>
+ [2m315[0m | [35;1m|[0m                       </div>
+ [2m316[0m | [35;1m|[0m                     </td>
+ [2m317[0m | [35;1m|[0m                     <td className="p-4">
+ [2m318[0m | [35;1m|[0m                       <p className="text-white">{formatCurrency(coin.volume24h)}</p>
+ [2m319[0m | [35;1m|[0m                     </td>
+ [2m320[0m | [35;1m|[0m                     <td className="p-4">
+ [2m321[0m | [35;1m|[0m                       <p className="text-white">{formatCurrency(coin.marketCap)}</p>
+ [2m322[0m | [35;1m|[0m                     </td>
+ [2m323[0m | [35;1m|[0m                     {isAuthenticated && (
+ [2m324[0m | [35;1m|[0m                       <td className="p-4">
+ [2m325[0m | [35;1m|[0m                         <button
+ [2m326[0m | [35;1m|[0m                           onClick={() => handleBuy(coin)}
+ [2m327[0m | [35;1m|[0m                           className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-sm font-medium transition-colors"
+ [2m328[0m | [35;1m|[0m                         >
+ [2m329[0m | [35;1m|[0m                           <ShoppingCart className="w-3 h-3" />
+ [2m330[0m | [35;1m|[0m                           Buy
+ [2m331[0m | [35;1m|[0m                         </button>
+ [2m332[0m | [35;1m|[0m                       </td>
+ [2m333[0m | [35;1m|[0m                     )}
+ [2m334[0m | [35;1m|[0m                   </tr>
+ [2m335[0m | [35;1m|[0m                 ))}
+ [2m336[0m | [35;1m|[0m               </tbody>
+ [2m337[0m | [35;1m|[0m             </table>
+ [2m338[0m | [35;1m|[0m           </div>
+ [2m339[0m | [35;1m|[0m         </div>
+ [2m340[0m | [35;1m|[0m   
+ [2m341[0m | [35;1m|[0m         {filteredCoins.length === 0 && !loading && (
+ [2m342[0m | [35;1m|[0m           <div className="text-center py-12">
+ [2m343[0m | [35;1m|[0m             <BarChart3 className="w-16 h-16 text-zinc-400 mx-auto mb-4" />
+ [2m344[0m | [35;1m|[0m             <h3 className="text-lg font-semibold mb-2">No coins found</h3>
+ [2m345[0m | [35;1m|[0m             <p className="text-zinc-400">Try adjusting your search or filters</p>
+ [2m346[0m | [35;1m|[0m           </div>
+ [2m347[0m | [35;1m|[0m         )}
+ [2m348[0m | [35;1m|[0m   
+ [2m349[0m | [35;1m|[0m         {selectedCoin && (
+ [2m350[0m | [35;1m|[0m           <BuyModal
+ [2m351[0m | [35;1m|[0m             isOpen={showBuyModal}
+ [2m352[0m | [35;1m|[0m             onClose={() => setShowBuyModal(false)}
+ [2m353[0m | [35;1m|[0m             coin={selectedCoin}
+ [2m354[0m | [35;1m|[0m           />
+ [2m355[0m | [35;1m|[0m         )}
+ [2m356[0m | [35;1m|[0m       </div>
+ [2m357[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m   );
+ [2m358[0m |     }
+     `----
+  [31mx[0m Expression expected
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:358:1]
+ [2m355[0m |       )}
+ [2m356[0m |     </div>
+ [2m357[0m |   );
+ [2m358[0m | }
+     : [35;1m^[0m
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/screener/screener-page.tsx
+./app/(trading)/screener/page.tsx
+ ⨯ ./components/screener/screener-page.tsx
+Error:   [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:115:1]
+ [2m112[0m |       };
+ [2m113[0m |     
+ [2m114[0m |       if (loading) {
+ [2m115[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m     return (
+ [2m116[0m | [35;1m|[0m         <div className="flex-1 bg-black text-white flex items-center justify-center">
+ [2m117[0m | [35;1m|[0m           <div className="text-center">
+ [2m118[0m | [35;1m|[0m             <Loader2 className="w-16 h-16 text-blue-400 mx-auto mb-4 animate-spin" />
+ [2m119[0m | [35;1m|[0m             <h2 className="text-2xl font-bold mb-2">Loading Crypto Screener</h2>
+ [2m120[0m | [35;1m|[0m             <p className="text-zinc-400">Please wait while we fetch market data...</p>
+ [2m121[0m | [35;1m|[0m           </div>
+ [2m122[0m | [35;1m|[0m         </div>
+ [2m123[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m     );
+ [2m124[0m |       }
+ [2m125[0m |     
+ [2m126[0m |       if (error) {
+     `----
+  [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:127:1]
+ [2m124[0m |       }
+ [2m125[0m |     
+ [2m126[0m |       if (error) {
+ [2m127[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m     return (
+ [2m128[0m | [35;1m|[0m         <div className="flex-1 bg-black text-white flex items-center justify-center">
+ [2m129[0m | [35;1m|[0m           <div className="text-center">
+ [2m130[0m | [35;1m|[0m             <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+ [2m131[0m | [35;1m|[0m               <span className="text-white text-2xl">!</span>
+ [2m132[0m | [35;1m|[0m             </div>
+ [2m133[0m | [35;1m|[0m             <h2 className="text-2xl font-bold mb-2">Error Loading Screener</h2>
+ [2m134[0m | [35;1m|[0m             <p className="text-zinc-400 mb-4">{error}</p>
+ [2m135[0m | [35;1m|[0m             <button
+ [2m136[0m | [35;1m|[0m               onClick={() => loadScreenerData()}
+ [2m137[0m | [35;1m|[0m               className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m138[0m | [35;1m|[0m             >
+ [2m139[0m | [35;1m|[0m               Try Again
+ [2m140[0m | [35;1m|[0m             </button>
+ [2m141[0m | [35;1m|[0m           </div>
+ [2m142[0m | [35;1m|[0m         </div>
+ [2m143[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m     );
+ [2m144[0m |       }
+ [2m145[0m |     
+ [2m146[0m |       return (
+     `----
+  [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:146:1]
+ [2m143[0m |         );
+ [2m144[0m |       }
+ [2m145[0m |     
+ [2m146[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m   return (
+ [2m147[0m | [35;1m|[0m       <div className="flex-1 bg-black text-white p-6">
+ [2m148[0m | [35;1m|[0m         {/* Header */}
+ [2m149[0m | [35;1m|[0m         <div className="mb-8 flex justify-between items-start">
+ [2m150[0m | [35;1m|[0m           <div>
+ [2m151[0m | [35;1m|[0m             <h1 className="text-3xl font-bold mb-2">Crypto Screener</h1>
+ [2m152[0m | [35;1m|[0m             <p className="text-zinc-400">Discover and analyze cryptocurrency markets</p>
+ [2m153[0m | [35;1m|[0m           </div>
+ [2m154[0m | [35;1m|[0m           <button
+ [2m155[0m | [35;1m|[0m             onClick={() => loadScreenerData()}
+ [2m156[0m | [35;1m|[0m             className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m157[0m | [35;1m|[0m           >
+ [2m158[0m | [35;1m|[0m             <RefreshCw className="w-4 h-4" />
+ [2m159[0m | [35;1m|[0m             Refresh
+ [2m160[0m | [35;1m|[0m           </button>
+ [2m161[0m | [35;1m|[0m         </div>
+ [2m162[0m | [35;1m|[0m   
+ [2m163[0m | [35;1m|[0m         {/* Filters */}
+ [2m164[0m | [35;1m|[0m         <div className="mb-6 flex flex-wrap gap-4 items-center">
+ [2m165[0m | [35;1m|[0m           {/* Blockchain Filter */}
+ [2m166[0m | [35;1m|[0m           <div className="flex gap-2">
+ [2m167[0m | [35;1m|[0m             {blockchains.map(blockchain => (
+ [2m168[0m | [35;1m|[0m               <button
+ [2m169[0m | [35;1m|[0m                 key={blockchain.id}
+ [2m170[0m | [35;1m|[0m                 onClick={() => setSelectedBlockchain(blockchain.id)}
+ [2m171[0m | [35;1m|[0m                 className={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${
+ [2m172[0m | [35;1m|[0m                   selectedBlockchain === blockchain.id
+ [2m173[0m | [35;1m|[0m                     ? 'bg-blue-600 text-white'
+ [2m174[0m | [35;1m|[0m                     : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+ [2m175[0m | [35;1m|[0m                 }`}
+ [2m176[0m | [35;1m|[0m               >
+ [2m177[0m | [35;1m|[0m                 <span>{blockchain.icon}</span>
+ [2m178[0m | [35;1m|[0m                 {blockchain.name}
+ [2m179[0m | [35;1m|[0m               </button>
+ [2m180[0m | [35;1m|[0m             ))}
+ [2m181[0m | [35;1m|[0m           </div>
+ [2m182[0m | [35;1m|[0m   
+ [2m183[0m | [35;1m|[0m           {/* Search */}
+ [2m184[0m | [35;1m|[0m           <div className="relative flex-1 max-w-md">
+ [2m185[0m | [35;1m|[0m             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
+ [2m186[0m | [35;1m|[0m             <input
+ [2m187[0m | [35;1m|[0m               type="text"
+ [2m188[0m | [35;1m|[0m               placeholder="Search coins..."
+ [2m189[0m | [35;1m|[0m               value={searchTerm}
+ [2m190[0m | [35;1m|[0m               onChange={(e) => setSearchTerm(e.target.value)}
+ [2m191[0m | [35;1m|[0m               className="w-full bg-zinc-800 text-white pl-10 pr-4 py-2 rounded-lg border border-zinc-700 focus:border-blue-500 focus:outline-none"
+ [2m192[0m | [35;1m|[0m             />
+ [2m193[0m | [35;1m|[0m           </div>
+ [2m194[0m | [35;1m|[0m   
+ [2m195[0m | [35;1m|[0m           {/* Filter Button */}
+ [2m196[0m | [35;1m|[0m           <button
+ [2m197[0m | [35;1m|[0m             onClick={() => setShowFilters(!showFilters)}
+ [2m198[0m | [35;1m|[0m             className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m199[0m | [35;1m|[0m           >
+ [2m200[0m | [35;1m|[0m             <Filter className="w-4 h-4" />
+ [2m201[0m | [35;1m|[0m             Filters
+ [2m202[0m | [35;1m|[0m           </button>
+ [2m203[0m | [35;1m|[0m         </div>
+ [2m204[0m | [35;1m|[0m   
+ [2m205[0m | [35;1m|[0m         {/* Results Count */}
+ [2m206[0m | [35;1m|[0m         <div className="mb-4 flex items-center gap-4">
+ [2m207[0m | [35;1m|[0m           <p className="text-zinc-400">
+ [2m208[0m | [35;1m|[0m             Showing {filteredCoins.length} coins
+ [2m209[0m | [35;1m|[0m           </p>
+ [2m210[0m | [35;1m|[0m           {selectedBlockchain !== 'all' && (
+ [2m211[0m | [35;1m|[0m             <span className="text-sm text-blue-400">
+ [2m212[0m | [35;1m|[0m               Filtered by {blockchains.find(b => b.id === selectedBlockchain)?.name}
+ [2m213[0m | [35;1m|[0m             </span>
+ [2m214[0m | [35;1m|[0m           )}
+ [2m215[0m | [35;1m|[0m         </div>
+ [2m216[0m | [35;1m|[0m   
+ [2m217[0m | [35;1m|[0m         {/* Coins Table */}
+ [2m218[0m | [35;1m|[0m         <div className="bg-zinc-900 rounded-lg border border-zinc-800 overflow-hidden">
+ [2m219[0m | [35;1m|[0m           <div className="overflow-x-auto">
+ [2m220[0m | [35;1m|[0m             <table className="w-full">
+ [2m221[0m | [35;1m|[0m               <thead>
+ [2m222[0m | [35;1m|[0m                 <tr className="text-zinc-400 text-sm border-b border-zinc-800">
+ [2m223[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m224[0m | [35;1m|[0m                     <button
+ [2m225[0m | [35;1m|[0m                       onClick={() => handleSort('rank')}
+ [2m226[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m227[0m | [35;1m|[0m                     >
+ [2m228[0m | [35;1m|[0m                       RANK
+ [2m229[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m230[0m | [35;1m|[0m                     </button>
+ [2m231[0m | [35;1m|[0m                   </th>
+ [2m232[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">COIN</th>
+ [2m233[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m234[0m | [35;1m|[0m                     <button
+ [2m235[0m | [35;1m|[0m                       onClick={() => handleSort('price')}
+ [2m236[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m237[0m | [35;1m|[0m                     >
+ [2m238[0m | [35;1m|[0m                       PRICE
+ [2m239[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m240[0m | [35;1m|[0m                     </button>
+ [2m241[0m | [35;1m|[0m                   </th>
+ [2m242[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m243[0m | [35;1m|[0m                     <button
+ [2m244[0m | [35;1m|[0m                       onClick={() => handleSort('change24h')}
+ [2m245[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m246[0m | [35;1m|[0m                     >
+ [2m247[0m | [35;1m|[0m                       24H CHANGE
+ [2m248[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m249[0m | [35;1m|[0m                     </button>
+ [2m250[0m | [35;1m|[0m                   </th>
+ [2m251[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m252[0m | [35;1m|[0m                     <button
+ [2m253[0m | [35;1m|[0m                       onClick={() => handleSort('volume24h')}
+ [2m254[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m255[0m | [35;1m|[0m                     >
+ [2m256[0m | [35;1m|[0m                       24H VOLUME
+ [2m257[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m258[0m | [35;1m|[0m                     </button>
+ [2m259[0m | [35;1m|[0m                   </th>
+ [2m260[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m261[0m | [35;1m|[0m                     <button
+ [2m262[0m | [35;1m|[0m                       onClick={() => handleSort('marketCap')}
+ [2m263[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m264[0m | [35;1m|[0m                     >
+ [2m265[0m | [35;1m|[0m                       MARKET CAP
+ [2m266[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m267[0m | [35;1m|[0m                     </button>
+ [2m268[0m | [35;1m|[0m                   </th>
+ [2m269[0m | [35;1m|[0m                   {isAuthenticated && (
+ [2m270[0m | [35;1m|[0m                     <th className="text-left p-4 font-medium">ACTION</th>
+ [2m271[0m | [35;1m|[0m                   )}
+ [2m272[0m | [35;1m|[0m                 </tr>
+ [2m273[0m | [35;1m|[0m               </thead>
+ [2m274[0m | [35;1m|[0m               <tbody>
+ [2m275[0m | [35;1m|[0m                 {filteredCoins.map((coin) => (
+ [2m276[0m | [35;1m|[0m                   <tr key={coin.id} className="border-b border-zinc-800 hover:bg-zinc-800/50 cursor-pointer">
+ [2m277[0m | [35;1m|[0m                     <td className="p-4">
+ [2m278[0m | [35;1m|[0m                       <span className="text-zinc-400 font-medium">#{coin.rank}</span>
+ [2m279[0m | [35;1m|[0m                     </td>
+ [2m280[0m | [35;1m|[0m                     <td className="p-4">
+ [2m281[0m | [35;1m|[0m                       <div className="flex items-center gap-3">
+ [2m282[0m | [35;1m|[0m                         {coin.image ? (
+ [2m283[0m | [35;1m|[0m                           <img
+ [2m284[0m | [35;1m|[0m                             src={coin.image}
+ [2m285[0m | [35;1m|[0m                             alt={coin.name}
+ [2m286[0m | [35;1m|[0m                             className="w-8 h-8 rounded-full"
+ [2m287[0m | [35;1m|[0m                           />
+ [2m288[0m | [35;1m|[0m                         ) : (
+ [2m289[0m | [35;1m|[0m                           <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">
+ [2m290[0m | [35;1m|[0m                             <span className="text-xs font-medium text-white">
+ [2m291[0m | [35;1m|[0m                               {coin.symbol.slice(0, 2).toUpperCase()}
+ [2m292[0m | [35;1m|[0m                             </span>
+ [2m293[0m | [35;1m|[0m                           </div>
+ [2m294[0m | [35;1m|[0m                         )}
+ [2m295[0m | [35;1m|[0m                         <div>
+ [2m296[0m | [35;1m|[0m                           <p className="font-medium text-white">{coin.symbol}</p>
+ [2m297[0m | [35;1m|[0m                           <p className="text-sm text-zinc-400">{coin.name}</p>
+ [2m298[0m | [35;1m|[0m                         </div>
+ [2m299[0m | [35;1m|[0m                       </div>
+ [2m300[0m | [35;1m|[0m                     </td>
+ [2m301[0m | [35;1m|[0m                     <td className="p-4">
+ [2m302[0m | [35;1m|[0m                       <p className="text-white font-medium">{formatPrice(coin.price)}</p>
+ [2m303[0m | [35;1m|[0m                     </td>
+ [2m304[0m | [35;1m|[0m                     <td className="p-4">
+ [2m305[0m | [35;1m|[0m                       <div className="flex items-center gap-1">
+ [2m306[0m | [35;1m|[0m                         {(coin.change24h || 0) >= 0 ? (
+ [2m307[0m | [35;1m|[0m                           <TrendingUp className="w-3 h-3 text-green-400" />
+ [2m308[0m | [35;1m|[0m                         ) : (
+ [2m309[0m | [35;1m|[0m                           <TrendingDown className="w-3 h-3 text-red-400" />
+ [2m310[0m | [35;1m|[0m                         )}
+ [2m311[0m | [35;1m|[0m                         <p className={`font-medium ${
+ [2m312[0m | [35;1m|[0m                           (coin.change24h || 0) >= 0 ? 'text-green-400' : 'text-red-400'
+ [2m313[0m | [35;1m|[0m                         }`}>
+ [2m314[0m | [35;1m|[0m                           {(coin.change24h || 0) >= 0 ? '+' : ''}{coin.change24h?.toFixed(2) || '0.00'}%
+ [2m315[0m | [35;1m|[0m                         </p>
+ [2m316[0m | [35;1m|[0m                       </div>
+ [2m317[0m | [35;1m|[0m                     </td>
+ [2m318[0m | [35;1m|[0m                     <td className="p-4">
+ [2m319[0m | [35;1m|[0m                       <p className="text-white">{formatCurrency(coin.volume24h)}</p>
+ [2m320[0m | [35;1m|[0m                     </td>
+ [2m321[0m | [35;1m|[0m                     <td className="p-4">
+ [2m322[0m | [35;1m|[0m                       <p className="text-white">{formatCurrency(coin.marketCap)}</p>
+ [2m323[0m | [35;1m|[0m                     </td>
+ [2m324[0m | [35;1m|[0m                     {isAuthenticated && (
+ [2m325[0m | [35;1m|[0m                       <td className="p-4">
+ [2m326[0m | [35;1m|[0m                         <button
+ [2m327[0m | [35;1m|[0m                           onClick={() => handleBuy(coin)}
+ [2m328[0m | [35;1m|[0m                           className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-sm font-medium transition-colors"
+ [2m329[0m | [35;1m|[0m                         >
+ [2m330[0m | [35;1m|[0m                           <ShoppingCart className="w-3 h-3" />
+ [2m331[0m | [35;1m|[0m                           Buy
+ [2m332[0m | [35;1m|[0m                         </button>
+ [2m333[0m | [35;1m|[0m                       </td>
+ [2m334[0m | [35;1m|[0m                     )}
+ [2m335[0m | [35;1m|[0m                   </tr>
+ [2m336[0m | [35;1m|[0m                 ))}
+ [2m337[0m | [35;1m|[0m               </tbody>
+ [2m338[0m | [35;1m|[0m             </table>
+ [2m339[0m | [35;1m|[0m           </div>
+ [2m340[0m | [35;1m|[0m         </div>
+ [2m341[0m | [35;1m|[0m   
+ [2m342[0m | [35;1m|[0m         {filteredCoins.length === 0 && !loading && (
+ [2m343[0m | [35;1m|[0m           <div className="text-center py-12">
+ [2m344[0m | [35;1m|[0m             <BarChart3 className="w-16 h-16 text-zinc-400 mx-auto mb-4" />
+ [2m345[0m | [35;1m|[0m             <h3 className="text-lg font-semibold mb-2">No coins found</h3>
+ [2m346[0m | [35;1m|[0m             <p className="text-zinc-400">Try adjusting your search or filters</p>
+ [2m347[0m | [35;1m|[0m           </div>
+ [2m348[0m | [35;1m|[0m         )}
+ [2m349[0m | [35;1m|[0m   
+ [2m350[0m | [35;1m|[0m         {selectedCoin && (
+ [2m351[0m | [35;1m|[0m           <BuyModal
+ [2m352[0m | [35;1m|[0m             isOpen={showBuyModal}
+ [2m353[0m | [35;1m|[0m             onClose={() => setShowBuyModal(false)}
+ [2m354[0m | [35;1m|[0m             coin={selectedCoin}
+ [2m355[0m | [35;1m|[0m           />
+ [2m356[0m | [35;1m|[0m         )}
+ [2m357[0m | [35;1m|[0m       </div>
+ [2m358[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m   );
+ [2m359[0m |     }
+     `----
+  [31mx[0m Expression expected
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:359:1]
+ [2m356[0m |       )}
+ [2m357[0m |     </div>
+ [2m358[0m |   );
+ [2m359[0m | }
+     : [35;1m^[0m
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/screener/screener-page.tsx
+./app/(trading)/screener/page.tsx
+ ⨯ ./components/screener/screener-page.tsx
+Error:   [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:115:1]
+ [2m112[0m |       };
+ [2m113[0m |     
+ [2m114[0m |       if (loading) {
+ [2m115[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m     return (
+ [2m116[0m | [35;1m|[0m         <div className="flex-1 bg-black text-white flex items-center justify-center">
+ [2m117[0m | [35;1m|[0m           <div className="text-center">
+ [2m118[0m | [35;1m|[0m             <Loader2 className="w-16 h-16 text-blue-400 mx-auto mb-4 animate-spin" />
+ [2m119[0m | [35;1m|[0m             <h2 className="text-2xl font-bold mb-2">Loading Crypto Screener</h2>
+ [2m120[0m | [35;1m|[0m             <p className="text-zinc-400">Please wait while we fetch market data...</p>
+ [2m121[0m | [35;1m|[0m           </div>
+ [2m122[0m | [35;1m|[0m         </div>
+ [2m123[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m     );
+ [2m124[0m |       }
+ [2m125[0m |     
+ [2m126[0m |       if (error) {
+     `----
+  [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:127:1]
+ [2m124[0m |       }
+ [2m125[0m |     
+ [2m126[0m |       if (error) {
+ [2m127[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m     return (
+ [2m128[0m | [35;1m|[0m         <div className="flex-1 bg-black text-white flex items-center justify-center">
+ [2m129[0m | [35;1m|[0m           <div className="text-center">
+ [2m130[0m | [35;1m|[0m             <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+ [2m131[0m | [35;1m|[0m               <span className="text-white text-2xl">!</span>
+ [2m132[0m | [35;1m|[0m             </div>
+ [2m133[0m | [35;1m|[0m             <h2 className="text-2xl font-bold mb-2">Error Loading Screener</h2>
+ [2m134[0m | [35;1m|[0m             <p className="text-zinc-400 mb-4">{error}</p>
+ [2m135[0m | [35;1m|[0m             <button
+ [2m136[0m | [35;1m|[0m               onClick={() => loadScreenerData()}
+ [2m137[0m | [35;1m|[0m               className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m138[0m | [35;1m|[0m             >
+ [2m139[0m | [35;1m|[0m               Try Again
+ [2m140[0m | [35;1m|[0m             </button>
+ [2m141[0m | [35;1m|[0m           </div>
+ [2m142[0m | [35;1m|[0m         </div>
+ [2m143[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m     );
+ [2m144[0m |       }
+ [2m145[0m |     
+ [2m146[0m |       return (
+     `----
+  [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:146:1]
+ [2m143[0m |         );
+ [2m144[0m |       }
+ [2m145[0m |     
+ [2m146[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m   return (
+ [2m147[0m | [35;1m|[0m       <div className="flex-1 bg-black text-white p-6">
+ [2m148[0m | [35;1m|[0m         {/* Header */}
+ [2m149[0m | [35;1m|[0m         <div className="mb-8 flex justify-between items-start">
+ [2m150[0m | [35;1m|[0m           <div>
+ [2m151[0m | [35;1m|[0m             <h1 className="text-3xl font-bold mb-2">Crypto Screener</h1>
+ [2m152[0m | [35;1m|[0m             <p className="text-zinc-400">Discover and analyze cryptocurrency markets</p>
+ [2m153[0m | [35;1m|[0m           </div>
+ [2m154[0m | [35;1m|[0m           <button
+ [2m155[0m | [35;1m|[0m             onClick={() => loadScreenerData()}
+ [2m156[0m | [35;1m|[0m             className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m157[0m | [35;1m|[0m           >
+ [2m158[0m | [35;1m|[0m             <RefreshCw className="w-4 h-4" />
+ [2m159[0m | [35;1m|[0m             Refresh
+ [2m160[0m | [35;1m|[0m           </button>
+ [2m161[0m | [35;1m|[0m         </div>
+ [2m162[0m | [35;1m|[0m   
+ [2m163[0m | [35;1m|[0m         {/* Filters */}
+ [2m164[0m | [35;1m|[0m         <div className="mb-6 flex flex-wrap gap-4 items-center">
+ [2m165[0m | [35;1m|[0m           {/* Blockchain Filter */}
+ [2m166[0m | [35;1m|[0m           <div className="flex gap-2">
+ [2m167[0m | [35;1m|[0m             {blockchains.map(blockchain => (
+ [2m168[0m | [35;1m|[0m               <button
+ [2m169[0m | [35;1m|[0m                 key={blockchain.id}
+ [2m170[0m | [35;1m|[0m                 onClick={() => setSelectedBlockchain(blockchain.id)}
+ [2m171[0m | [35;1m|[0m                 className={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${
+ [2m172[0m | [35;1m|[0m                   selectedBlockchain === blockchain.id
+ [2m173[0m | [35;1m|[0m                     ? 'bg-blue-600 text-white'
+ [2m174[0m | [35;1m|[0m                     : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+ [2m175[0m | [35;1m|[0m                 }`}
+ [2m176[0m | [35;1m|[0m               >
+ [2m177[0m | [35;1m|[0m                 <span>{blockchain.icon}</span>
+ [2m178[0m | [35;1m|[0m                 {blockchain.name}
+ [2m179[0m | [35;1m|[0m               </button>
+ [2m180[0m | [35;1m|[0m             ))}
+ [2m181[0m | [35;1m|[0m           </div>
+ [2m182[0m | [35;1m|[0m   
+ [2m183[0m | [35;1m|[0m           {/* Search */}
+ [2m184[0m | [35;1m|[0m           <div className="relative flex-1 max-w-md">
+ [2m185[0m | [35;1m|[0m             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
+ [2m186[0m | [35;1m|[0m             <input
+ [2m187[0m | [35;1m|[0m               type="text"
+ [2m188[0m | [35;1m|[0m               placeholder="Search coins..."
+ [2m189[0m | [35;1m|[0m               value={searchTerm}
+ [2m190[0m | [35;1m|[0m               onChange={(e) => setSearchTerm(e.target.value)}
+ [2m191[0m | [35;1m|[0m               className="w-full bg-zinc-800 text-white pl-10 pr-4 py-2 rounded-lg border border-zinc-700 focus:border-blue-500 focus:outline-none"
+ [2m192[0m | [35;1m|[0m             />
+ [2m193[0m | [35;1m|[0m           </div>
+ [2m194[0m | [35;1m|[0m   
+ [2m195[0m | [35;1m|[0m           {/* Filter Button */}
+ [2m196[0m | [35;1m|[0m           <button
+ [2m197[0m | [35;1m|[0m             onClick={() => setShowFilters(!showFilters)}
+ [2m198[0m | [35;1m|[0m             className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m199[0m | [35;1m|[0m           >
+ [2m200[0m | [35;1m|[0m             <Filter className="w-4 h-4" />
+ [2m201[0m | [35;1m|[0m             Filters
+ [2m202[0m | [35;1m|[0m           </button>
+ [2m203[0m | [35;1m|[0m         </div>
+ [2m204[0m | [35;1m|[0m   
+ [2m205[0m | [35;1m|[0m         {/* Results Count */}
+ [2m206[0m | [35;1m|[0m         <div className="mb-4 flex items-center gap-4">
+ [2m207[0m | [35;1m|[0m           <p className="text-zinc-400">
+ [2m208[0m | [35;1m|[0m             Showing {filteredCoins.length} coins
+ [2m209[0m | [35;1m|[0m           </p>
+ [2m210[0m | [35;1m|[0m           {selectedBlockchain !== 'all' && (
+ [2m211[0m | [35;1m|[0m             <span className="text-sm text-blue-400">
+ [2m212[0m | [35;1m|[0m               Filtered by {blockchains.find(b => b.id === selectedBlockchain)?.name}
+ [2m213[0m | [35;1m|[0m             </span>
+ [2m214[0m | [35;1m|[0m           )}
+ [2m215[0m | [35;1m|[0m         </div>
+ [2m216[0m | [35;1m|[0m   
+ [2m217[0m | [35;1m|[0m         {/* Coins Table */}
+ [2m218[0m | [35;1m|[0m         <div className="bg-zinc-900 rounded-lg border border-zinc-800 overflow-hidden">
+ [2m219[0m | [35;1m|[0m           <div className="overflow-x-auto">
+ [2m220[0m | [35;1m|[0m             <table className="w-full">
+ [2m221[0m | [35;1m|[0m               <thead>
+ [2m222[0m | [35;1m|[0m                 <tr className="text-zinc-400 text-sm border-b border-zinc-800">
+ [2m223[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m224[0m | [35;1m|[0m                     <button
+ [2m225[0m | [35;1m|[0m                       onClick={() => handleSort('rank')}
+ [2m226[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m227[0m | [35;1m|[0m                     >
+ [2m228[0m | [35;1m|[0m                       RANK
+ [2m229[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m230[0m | [35;1m|[0m                     </button>
+ [2m231[0m | [35;1m|[0m                   </th>
+ [2m232[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">COIN</th>
+ [2m233[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m234[0m | [35;1m|[0m                     <button
+ [2m235[0m | [35;1m|[0m                       onClick={() => handleSort('price')}
+ [2m236[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m237[0m | [35;1m|[0m                     >
+ [2m238[0m | [35;1m|[0m                       PRICE
+ [2m239[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m240[0m | [35;1m|[0m                     </button>
+ [2m241[0m | [35;1m|[0m                   </th>
+ [2m242[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m243[0m | [35;1m|[0m                     <button
+ [2m244[0m | [35;1m|[0m                       onClick={() => handleSort('change24h')}
+ [2m245[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m246[0m | [35;1m|[0m                     >
+ [2m247[0m | [35;1m|[0m                       24H CHANGE
+ [2m248[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m249[0m | [35;1m|[0m                     </button>
+ [2m250[0m | [35;1m|[0m                   </th>
+ [2m251[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m252[0m | [35;1m|[0m                     <button
+ [2m253[0m | [35;1m|[0m                       onClick={() => handleSort('volume24h')}
+ [2m254[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m255[0m | [35;1m|[0m                     >
+ [2m256[0m | [35;1m|[0m                       24H VOLUME
+ [2m257[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m258[0m | [35;1m|[0m                     </button>
+ [2m259[0m | [35;1m|[0m                   </th>
+ [2m260[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m261[0m | [35;1m|[0m                     <button
+ [2m262[0m | [35;1m|[0m                       onClick={() => handleSort('marketCap')}
+ [2m263[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m264[0m | [35;1m|[0m                     >
+ [2m265[0m | [35;1m|[0m                       MARKET CAP
+ [2m266[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m267[0m | [35;1m|[0m                     </button>
+ [2m268[0m | [35;1m|[0m                   </th>
+ [2m269[0m | [35;1m|[0m                   {isAuthenticated && (
+ [2m270[0m | [35;1m|[0m                     <th className="text-left p-4 font-medium">ACTION</th>
+ [2m271[0m | [35;1m|[0m                   )}
+ [2m272[0m | [35;1m|[0m                 </tr>
+ [2m273[0m | [35;1m|[0m               </thead>
+ [2m274[0m | [35;1m|[0m               <tbody>
+ [2m275[0m | [35;1m|[0m                 {filteredCoins.map((coin) => (
+ [2m276[0m | [35;1m|[0m                   <tr key={coin.id} className="border-b border-zinc-800 hover:bg-zinc-800/50 cursor-pointer">
+ [2m277[0m | [35;1m|[0m                     <td className="p-4">
+ [2m278[0m | [35;1m|[0m                       <span className="text-zinc-400 font-medium">#{coin.rank}</span>
+ [2m279[0m | [35;1m|[0m                     </td>
+ [2m280[0m | [35;1m|[0m                     <td className="p-4">
+ [2m281[0m | [35;1m|[0m                       <div className="flex items-center gap-3">
+ [2m282[0m | [35;1m|[0m                         {coin.image ? (
+ [2m283[0m | [35;1m|[0m                           <img
+ [2m284[0m | [35;1m|[0m                             src={coin.image}
+ [2m285[0m | [35;1m|[0m                             alt={coin.name}
+ [2m286[0m | [35;1m|[0m                             className="w-8 h-8 rounded-full"
+ [2m287[0m | [35;1m|[0m                           />
+ [2m288[0m | [35;1m|[0m                         ) : (
+ [2m289[0m | [35;1m|[0m                           <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">
+ [2m290[0m | [35;1m|[0m                             <span className="text-xs font-medium text-white">
+ [2m291[0m | [35;1m|[0m                               {coin.symbol.slice(0, 2).toUpperCase()}
+ [2m292[0m | [35;1m|[0m                             </span>
+ [2m293[0m | [35;1m|[0m                           </div>
+ [2m294[0m | [35;1m|[0m                         )}
+ [2m295[0m | [35;1m|[0m                         <div>
+ [2m296[0m | [35;1m|[0m                           <p className="font-medium text-white">{coin.symbol}</p>
+ [2m297[0m | [35;1m|[0m                           <p className="text-sm text-zinc-400">{coin.name}</p>
+ [2m298[0m | [35;1m|[0m                         </div>
+ [2m299[0m | [35;1m|[0m                       </div>
+ [2m300[0m | [35;1m|[0m                     </td>
+ [2m301[0m | [35;1m|[0m                     <td className="p-4">
+ [2m302[0m | [35;1m|[0m                       <p className="text-white font-medium">{formatPrice(coin.price)}</p>
+ [2m303[0m | [35;1m|[0m                     </td>
+ [2m304[0m | [35;1m|[0m                     <td className="p-4">
+ [2m305[0m | [35;1m|[0m                       <div className="flex items-center gap-1">
+ [2m306[0m | [35;1m|[0m                         {(coin.change24h || 0) >= 0 ? (
+ [2m307[0m | [35;1m|[0m                           <TrendingUp className="w-3 h-3 text-green-400" />
+ [2m308[0m | [35;1m|[0m                         ) : (
+ [2m309[0m | [35;1m|[0m                           <TrendingDown className="w-3 h-3 text-red-400" />
+ [2m310[0m | [35;1m|[0m                         )}
+ [2m311[0m | [35;1m|[0m                         <p className={`font-medium ${
+ [2m312[0m | [35;1m|[0m                           (coin.change24h || 0) >= 0 ? 'text-green-400' : 'text-red-400'
+ [2m313[0m | [35;1m|[0m                         }`}>
+ [2m314[0m | [35;1m|[0m                           {(coin.change24h || 0) >= 0 ? '+' : ''}{coin.change24h?.toFixed(2) || '0.00'}%
+ [2m315[0m | [35;1m|[0m                         </p>
+ [2m316[0m | [35;1m|[0m                       </div>
+ [2m317[0m | [35;1m|[0m                     </td>
+ [2m318[0m | [35;1m|[0m                     <td className="p-4">
+ [2m319[0m | [35;1m|[0m                       <p className="text-white">{formatCurrency(coin.volume24h)}</p>
+ [2m320[0m | [35;1m|[0m                     </td>
+ [2m321[0m | [35;1m|[0m                     <td className="p-4">
+ [2m322[0m | [35;1m|[0m                       <p className="text-white">{formatCurrency(coin.marketCap)}</p>
+ [2m323[0m | [35;1m|[0m                     </td>
+ [2m324[0m | [35;1m|[0m                     {isAuthenticated && (
+ [2m325[0m | [35;1m|[0m                       <td className="p-4">
+ [2m326[0m | [35;1m|[0m                         <button
+ [2m327[0m | [35;1m|[0m                           onClick={() => handleBuy(coin)}
+ [2m328[0m | [35;1m|[0m                           className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-sm font-medium transition-colors"
+ [2m329[0m | [35;1m|[0m                         >
+ [2m330[0m | [35;1m|[0m                           <ShoppingCart className="w-3 h-3" />
+ [2m331[0m | [35;1m|[0m                           Buy
+ [2m332[0m | [35;1m|[0m                         </button>
+ [2m333[0m | [35;1m|[0m                       </td>
+ [2m334[0m | [35;1m|[0m                     )}
+ [2m335[0m | [35;1m|[0m                   </tr>
+ [2m336[0m | [35;1m|[0m                 ))}
+ [2m337[0m | [35;1m|[0m               </tbody>
+ [2m338[0m | [35;1m|[0m             </table>
+ [2m339[0m | [35;1m|[0m           </div>
+ [2m340[0m | [35;1m|[0m         </div>
+ [2m341[0m | [35;1m|[0m   
+ [2m342[0m | [35;1m|[0m         {filteredCoins.length === 0 && !loading && (
+ [2m343[0m | [35;1m|[0m           <div className="text-center py-12">
+ [2m344[0m | [35;1m|[0m             <BarChart3 className="w-16 h-16 text-zinc-400 mx-auto mb-4" />
+ [2m345[0m | [35;1m|[0m             <h3 className="text-lg font-semibold mb-2">No coins found</h3>
+ [2m346[0m | [35;1m|[0m             <p className="text-zinc-400">Try adjusting your search or filters</p>
+ [2m347[0m | [35;1m|[0m           </div>
+ [2m348[0m | [35;1m|[0m         )}
+ [2m349[0m | [35;1m|[0m   
+ [2m350[0m | [35;1m|[0m         {selectedCoin && (
+ [2m351[0m | [35;1m|[0m           <BuyModal
+ [2m352[0m | [35;1m|[0m             isOpen={showBuyModal}
+ [2m353[0m | [35;1m|[0m             onClose={() => setShowBuyModal(false)}
+ [2m354[0m | [35;1m|[0m             coin={selectedCoin}
+ [2m355[0m | [35;1m|[0m           />
+ [2m356[0m | [35;1m|[0m         )}
+ [2m357[0m | [35;1m|[0m       </div>
+ [2m358[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m   );
+ [2m359[0m |     }
+     `----
+  [31mx[0m Expression expected
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:359:1]
+ [2m356[0m |       )}
+ [2m357[0m |     </div>
+ [2m358[0m |   );
+ [2m359[0m | }
+     : [35;1m^[0m
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/screener/screener-page.tsx
+./app/(trading)/screener/page.tsx
+ ⨯ ./components/screener/screener-page.tsx
+Error:   [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:115:1]
+ [2m112[0m |       };
+ [2m113[0m |     
+ [2m114[0m |       if (loading) {
+ [2m115[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m     return (
+ [2m116[0m | [35;1m|[0m         <div className="flex-1 bg-black text-white flex items-center justify-center">
+ [2m117[0m | [35;1m|[0m           <div className="text-center">
+ [2m118[0m | [35;1m|[0m             <Loader2 className="w-16 h-16 text-blue-400 mx-auto mb-4 animate-spin" />
+ [2m119[0m | [35;1m|[0m             <h2 className="text-2xl font-bold mb-2">Loading Crypto Screener</h2>
+ [2m120[0m | [35;1m|[0m             <p className="text-zinc-400">Please wait while we fetch market data...</p>
+ [2m121[0m | [35;1m|[0m           </div>
+ [2m122[0m | [35;1m|[0m         </div>
+ [2m123[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m     );
+ [2m124[0m |       }
+ [2m125[0m |     
+ [2m126[0m |       if (error) {
+     `----
+  [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:127:1]
+ [2m124[0m |       }
+ [2m125[0m |     
+ [2m126[0m |       if (error) {
+ [2m127[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m     return (
+ [2m128[0m | [35;1m|[0m         <div className="flex-1 bg-black text-white flex items-center justify-center">
+ [2m129[0m | [35;1m|[0m           <div className="text-center">
+ [2m130[0m | [35;1m|[0m             <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+ [2m131[0m | [35;1m|[0m               <span className="text-white text-2xl">!</span>
+ [2m132[0m | [35;1m|[0m             </div>
+ [2m133[0m | [35;1m|[0m             <h2 className="text-2xl font-bold mb-2">Error Loading Screener</h2>
+ [2m134[0m | [35;1m|[0m             <p className="text-zinc-400 mb-4">{error}</p>
+ [2m135[0m | [35;1m|[0m             <button
+ [2m136[0m | [35;1m|[0m               onClick={() => loadScreenerData()}
+ [2m137[0m | [35;1m|[0m               className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m138[0m | [35;1m|[0m             >
+ [2m139[0m | [35;1m|[0m               Try Again
+ [2m140[0m | [35;1m|[0m             </button>
+ [2m141[0m | [35;1m|[0m           </div>
+ [2m142[0m | [35;1m|[0m         </div>
+ [2m143[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m     );
+ [2m144[0m |       }
+ [2m145[0m |     
+ [2m146[0m |       return (
+     `----
+  [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:146:1]
+ [2m143[0m |         );
+ [2m144[0m |       }
+ [2m145[0m |     
+ [2m146[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m   return (
+ [2m147[0m | [35;1m|[0m       <div className="flex-1 bg-black text-white p-6">
+ [2m148[0m | [35;1m|[0m         {/* Header */}
+ [2m149[0m | [35;1m|[0m         <div className="mb-8 flex justify-between items-start">
+ [2m150[0m | [35;1m|[0m           <div>
+ [2m151[0m | [35;1m|[0m             <h1 className="text-3xl font-bold mb-2">Crypto Screener</h1>
+ [2m152[0m | [35;1m|[0m             <p className="text-zinc-400">Discover and analyze cryptocurrency markets</p>
+ [2m153[0m | [35;1m|[0m           </div>
+ [2m154[0m | [35;1m|[0m           <button
+ [2m155[0m | [35;1m|[0m             onClick={() => loadScreenerData()}
+ [2m156[0m | [35;1m|[0m             className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m157[0m | [35;1m|[0m           >
+ [2m158[0m | [35;1m|[0m             <RefreshCw className="w-4 h-4" />
+ [2m159[0m | [35;1m|[0m             Refresh
+ [2m160[0m | [35;1m|[0m           </button>
+ [2m161[0m | [35;1m|[0m         </div>
+ [2m162[0m | [35;1m|[0m   
+ [2m163[0m | [35;1m|[0m         {/* Filters */}
+ [2m164[0m | [35;1m|[0m         <div className="mb-6 flex flex-wrap gap-4 items-center">
+ [2m165[0m | [35;1m|[0m           {/* Blockchain Filter */}
+ [2m166[0m | [35;1m|[0m           <div className="flex gap-2">
+ [2m167[0m | [35;1m|[0m             {blockchains.map(blockchain => (
+ [2m168[0m | [35;1m|[0m               <button
+ [2m169[0m | [35;1m|[0m                 key={blockchain.id}
+ [2m170[0m | [35;1m|[0m                 onClick={() => setSelectedBlockchain(blockchain.id)}
+ [2m171[0m | [35;1m|[0m                 className={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${
+ [2m172[0m | [35;1m|[0m                   selectedBlockchain === blockchain.id
+ [2m173[0m | [35;1m|[0m                     ? 'bg-blue-600 text-white'
+ [2m174[0m | [35;1m|[0m                     : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+ [2m175[0m | [35;1m|[0m                 }`}
+ [2m176[0m | [35;1m|[0m               >
+ [2m177[0m | [35;1m|[0m                 <span>{blockchain.icon}</span>
+ [2m178[0m | [35;1m|[0m                 {blockchain.name}
+ [2m179[0m | [35;1m|[0m               </button>
+ [2m180[0m | [35;1m|[0m             ))}
+ [2m181[0m | [35;1m|[0m           </div>
+ [2m182[0m | [35;1m|[0m   
+ [2m183[0m | [35;1m|[0m           {/* Search */}
+ [2m184[0m | [35;1m|[0m           <div className="relative flex-1 max-w-md">
+ [2m185[0m | [35;1m|[0m             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
+ [2m186[0m | [35;1m|[0m             <input
+ [2m187[0m | [35;1m|[0m               type="text"
+ [2m188[0m | [35;1m|[0m               placeholder="Search coins..."
+ [2m189[0m | [35;1m|[0m               value={searchTerm}
+ [2m190[0m | [35;1m|[0m               onChange={(e) => setSearchTerm(e.target.value)}
+ [2m191[0m | [35;1m|[0m               className="w-full bg-zinc-800 text-white pl-10 pr-4 py-2 rounded-lg border border-zinc-700 focus:border-blue-500 focus:outline-none"
+ [2m192[0m | [35;1m|[0m             />
+ [2m193[0m | [35;1m|[0m           </div>
+ [2m194[0m | [35;1m|[0m   
+ [2m195[0m | [35;1m|[0m           {/* Filter Button */}
+ [2m196[0m | [35;1m|[0m           <button
+ [2m197[0m | [35;1m|[0m             onClick={() => setShowFilters(!showFilters)}
+ [2m198[0m | [35;1m|[0m             className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m199[0m | [35;1m|[0m           >
+ [2m200[0m | [35;1m|[0m             <Filter className="w-4 h-4" />
+ [2m201[0m | [35;1m|[0m             Filters
+ [2m202[0m | [35;1m|[0m           </button>
+ [2m203[0m | [35;1m|[0m         </div>
+ [2m204[0m | [35;1m|[0m   
+ [2m205[0m | [35;1m|[0m         {/* Results Count */}
+ [2m206[0m | [35;1m|[0m         <div className="mb-4 flex items-center gap-4">
+ [2m207[0m | [35;1m|[0m           <p className="text-zinc-400">
+ [2m208[0m | [35;1m|[0m             Showing {filteredCoins.length} coins
+ [2m209[0m | [35;1m|[0m           </p>
+ [2m210[0m | [35;1m|[0m           {selectedBlockchain !== 'all' && (
+ [2m211[0m | [35;1m|[0m             <span className="text-sm text-blue-400">
+ [2m212[0m | [35;1m|[0m               Filtered by {blockchains.find(b => b.id === selectedBlockchain)?.name}
+ [2m213[0m | [35;1m|[0m             </span>
+ [2m214[0m | [35;1m|[0m           )}
+ [2m215[0m | [35;1m|[0m         </div>
+ [2m216[0m | [35;1m|[0m   
+ [2m217[0m | [35;1m|[0m         {/* Coins Table */}
+ [2m218[0m | [35;1m|[0m         <div className="bg-zinc-900 rounded-lg border border-zinc-800 overflow-hidden">
+ [2m219[0m | [35;1m|[0m           <div className="overflow-x-auto">
+ [2m220[0m | [35;1m|[0m             <table className="w-full">
+ [2m221[0m | [35;1m|[0m               <thead>
+ [2m222[0m | [35;1m|[0m                 <tr className="text-zinc-400 text-sm border-b border-zinc-800">
+ [2m223[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m224[0m | [35;1m|[0m                     <button
+ [2m225[0m | [35;1m|[0m                       onClick={() => handleSort('rank')}
+ [2m226[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m227[0m | [35;1m|[0m                     >
+ [2m228[0m | [35;1m|[0m                       RANK
+ [2m229[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m230[0m | [35;1m|[0m                     </button>
+ [2m231[0m | [35;1m|[0m                   </th>
+ [2m232[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">COIN</th>
+ [2m233[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m234[0m | [35;1m|[0m                     <button
+ [2m235[0m | [35;1m|[0m                       onClick={() => handleSort('price')}
+ [2m236[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m237[0m | [35;1m|[0m                     >
+ [2m238[0m | [35;1m|[0m                       PRICE
+ [2m239[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m240[0m | [35;1m|[0m                     </button>
+ [2m241[0m | [35;1m|[0m                   </th>
+ [2m242[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m243[0m | [35;1m|[0m                     <button
+ [2m244[0m | [35;1m|[0m                       onClick={() => handleSort('change24h')}
+ [2m245[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m246[0m | [35;1m|[0m                     >
+ [2m247[0m | [35;1m|[0m                       24H CHANGE
+ [2m248[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m249[0m | [35;1m|[0m                     </button>
+ [2m250[0m | [35;1m|[0m                   </th>
+ [2m251[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m252[0m | [35;1m|[0m                     <button
+ [2m253[0m | [35;1m|[0m                       onClick={() => handleSort('volume24h')}
+ [2m254[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m255[0m | [35;1m|[0m                     >
+ [2m256[0m | [35;1m|[0m                       24H VOLUME
+ [2m257[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m258[0m | [35;1m|[0m                     </button>
+ [2m259[0m | [35;1m|[0m                   </th>
+ [2m260[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m261[0m | [35;1m|[0m                     <button
+ [2m262[0m | [35;1m|[0m                       onClick={() => handleSort('marketCap')}
+ [2m263[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m264[0m | [35;1m|[0m                     >
+ [2m265[0m | [35;1m|[0m                       MARKET CAP
+ [2m266[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m267[0m | [35;1m|[0m                     </button>
+ [2m268[0m | [35;1m|[0m                   </th>
+ [2m269[0m | [35;1m|[0m                   {isAuthenticated && (
+ [2m270[0m | [35;1m|[0m                     <th className="text-left p-4 font-medium">ACTION</th>
+ [2m271[0m | [35;1m|[0m                   )}
+ [2m272[0m | [35;1m|[0m                 </tr>
+ [2m273[0m | [35;1m|[0m               </thead>
+ [2m274[0m | [35;1m|[0m               <tbody>
+ [2m275[0m | [35;1m|[0m                 {filteredCoins.map((coin) => (
+ [2m276[0m | [35;1m|[0m                   <tr key={coin.id} className="border-b border-zinc-800 hover:bg-zinc-800/50 cursor-pointer">
+ [2m277[0m | [35;1m|[0m                     <td className="p-4">
+ [2m278[0m | [35;1m|[0m                       <span className="text-zinc-400 font-medium">#{coin.rank}</span>
+ [2m279[0m | [35;1m|[0m                     </td>
+ [2m280[0m | [35;1m|[0m                     <td className="p-4">
+ [2m281[0m | [35;1m|[0m                       <div className="flex items-center gap-3">
+ [2m282[0m | [35;1m|[0m                         {coin.image ? (
+ [2m283[0m | [35;1m|[0m                           <img
+ [2m284[0m | [35;1m|[0m                             src={coin.image}
+ [2m285[0m | [35;1m|[0m                             alt={coin.name}
+ [2m286[0m | [35;1m|[0m                             className="w-8 h-8 rounded-full"
+ [2m287[0m | [35;1m|[0m                           />
+ [2m288[0m | [35;1m|[0m                         ) : (
+ [2m289[0m | [35;1m|[0m                           <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">
+ [2m290[0m | [35;1m|[0m                             <span className="text-xs font-medium text-white">
+ [2m291[0m | [35;1m|[0m                               {coin.symbol.slice(0, 2).toUpperCase()}
+ [2m292[0m | [35;1m|[0m                             </span>
+ [2m293[0m | [35;1m|[0m                           </div>
+ [2m294[0m | [35;1m|[0m                         )}
+ [2m295[0m | [35;1m|[0m                         <div>
+ [2m296[0m | [35;1m|[0m                           <p className="font-medium text-white">{coin.symbol}</p>
+ [2m297[0m | [35;1m|[0m                           <p className="text-sm text-zinc-400">{coin.name}</p>
+ [2m298[0m | [35;1m|[0m                         </div>
+ [2m299[0m | [35;1m|[0m                       </div>
+ [2m300[0m | [35;1m|[0m                     </td>
+ [2m301[0m | [35;1m|[0m                     <td className="p-4">
+ [2m302[0m | [35;1m|[0m                       <p className="text-white font-medium">{formatPrice(coin.price)}</p>
+ [2m303[0m | [35;1m|[0m                     </td>
+ [2m304[0m | [35;1m|[0m                     <td className="p-4">
+ [2m305[0m | [35;1m|[0m                       <div className="flex items-center gap-1">
+ [2m306[0m | [35;1m|[0m                         {(coin.change24h || 0) >= 0 ? (
+ [2m307[0m | [35;1m|[0m                           <TrendingUp className="w-3 h-3 text-green-400" />
+ [2m308[0m | [35;1m|[0m                         ) : (
+ [2m309[0m | [35;1m|[0m                           <TrendingDown className="w-3 h-3 text-red-400" />
+ [2m310[0m | [35;1m|[0m                         )}
+ [2m311[0m | [35;1m|[0m                         <p className={`font-medium ${
+ [2m312[0m | [35;1m|[0m                           (coin.change24h || 0) >= 0 ? 'text-green-400' : 'text-red-400'
+ [2m313[0m | [35;1m|[0m                         }`}>
+ [2m314[0m | [35;1m|[0m                           {(coin.change24h || 0) >= 0 ? '+' : ''}{coin.change24h?.toFixed(2) || '0.00'}%
+ [2m315[0m | [35;1m|[0m                         </p>
+ [2m316[0m | [35;1m|[0m                       </div>
+ [2m317[0m | [35;1m|[0m                     </td>
+ [2m318[0m | [35;1m|[0m                     <td className="p-4">
+ [2m319[0m | [35;1m|[0m                       <p className="text-white">{formatCurrency(coin.volume24h)}</p>
+ [2m320[0m | [35;1m|[0m                     </td>
+ [2m321[0m | [35;1m|[0m                     <td className="p-4">
+ [2m322[0m | [35;1m|[0m                       <p className="text-white">{formatCurrency(coin.marketCap)}</p>
+ [2m323[0m | [35;1m|[0m                     </td>
+ [2m324[0m | [35;1m|[0m                     {isAuthenticated && (
+ [2m325[0m | [35;1m|[0m                       <td className="p-4">
+ [2m326[0m | [35;1m|[0m                         <button
+ [2m327[0m | [35;1m|[0m                           onClick={() => handleBuy(coin)}
+ [2m328[0m | [35;1m|[0m                           className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-sm font-medium transition-colors"
+ [2m329[0m | [35;1m|[0m                         >
+ [2m330[0m | [35;1m|[0m                           <ShoppingCart className="w-3 h-3" />
+ [2m331[0m | [35;1m|[0m                           Buy
+ [2m332[0m | [35;1m|[0m                         </button>
+ [2m333[0m | [35;1m|[0m                       </td>
+ [2m334[0m | [35;1m|[0m                     )}
+ [2m335[0m | [35;1m|[0m                   </tr>
+ [2m336[0m | [35;1m|[0m                 ))}
+ [2m337[0m | [35;1m|[0m               </tbody>
+ [2m338[0m | [35;1m|[0m             </table>
+ [2m339[0m | [35;1m|[0m           </div>
+ [2m340[0m | [35;1m|[0m         </div>
+ [2m341[0m | [35;1m|[0m   
+ [2m342[0m | [35;1m|[0m         {filteredCoins.length === 0 && !loading && (
+ [2m343[0m | [35;1m|[0m           <div className="text-center py-12">
+ [2m344[0m | [35;1m|[0m             <BarChart3 className="w-16 h-16 text-zinc-400 mx-auto mb-4" />
+ [2m345[0m | [35;1m|[0m             <h3 className="text-lg font-semibold mb-2">No coins found</h3>
+ [2m346[0m | [35;1m|[0m             <p className="text-zinc-400">Try adjusting your search or filters</p>
+ [2m347[0m | [35;1m|[0m           </div>
+ [2m348[0m | [35;1m|[0m         )}
+ [2m349[0m | [35;1m|[0m   
+ [2m350[0m | [35;1m|[0m         {selectedCoin && (
+ [2m351[0m | [35;1m|[0m           <BuyModal
+ [2m352[0m | [35;1m|[0m             isOpen={showBuyModal}
+ [2m353[0m | [35;1m|[0m             onClose={() => setShowBuyModal(false)}
+ [2m354[0m | [35;1m|[0m             coin={selectedCoin}
+ [2m355[0m | [35;1m|[0m           />
+ [2m356[0m | [35;1m|[0m         )}
+ [2m357[0m | [35;1m|[0m       </div>
+ [2m358[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m   );
+ [2m359[0m |     }
+     `----
+  [31mx[0m Expression expected
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:359:1]
+ [2m356[0m |       )}
+ [2m357[0m |     </div>
+ [2m358[0m |   );
+ [2m359[0m | }
+     : [35;1m^[0m
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/screener/screener-page.tsx
+./app/(trading)/screener/page.tsx
+ ⨯ ./components/screener/screener-page.tsx
+Error:   [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:115:1]
+ [2m112[0m |       };
+ [2m113[0m |     
+ [2m114[0m |       if (loading) {
+ [2m115[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m     return (
+ [2m116[0m | [35;1m|[0m         <div className="flex-1 bg-black text-white flex items-center justify-center">
+ [2m117[0m | [35;1m|[0m           <div className="text-center">
+ [2m118[0m | [35;1m|[0m             <Loader2 className="w-16 h-16 text-blue-400 mx-auto mb-4 animate-spin" />
+ [2m119[0m | [35;1m|[0m             <h2 className="text-2xl font-bold mb-2">Loading Crypto Screener</h2>
+ [2m120[0m | [35;1m|[0m             <p className="text-zinc-400">Please wait while we fetch market data...</p>
+ [2m121[0m | [35;1m|[0m           </div>
+ [2m122[0m | [35;1m|[0m         </div>
+ [2m123[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m     );
+ [2m124[0m |       }
+ [2m125[0m |     
+ [2m126[0m |       if (error) {
+     `----
+  [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:127:1]
+ [2m124[0m |       }
+ [2m125[0m |     
+ [2m126[0m |       if (error) {
+ [2m127[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m     return (
+ [2m128[0m | [35;1m|[0m         <div className="flex-1 bg-black text-white flex items-center justify-center">
+ [2m129[0m | [35;1m|[0m           <div className="text-center">
+ [2m130[0m | [35;1m|[0m             <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+ [2m131[0m | [35;1m|[0m               <span className="text-white text-2xl">!</span>
+ [2m132[0m | [35;1m|[0m             </div>
+ [2m133[0m | [35;1m|[0m             <h2 className="text-2xl font-bold mb-2">Error Loading Screener</h2>
+ [2m134[0m | [35;1m|[0m             <p className="text-zinc-400 mb-4">{error}</p>
+ [2m135[0m | [35;1m|[0m             <button
+ [2m136[0m | [35;1m|[0m               onClick={() => loadScreenerData()}
+ [2m137[0m | [35;1m|[0m               className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m138[0m | [35;1m|[0m             >
+ [2m139[0m | [35;1m|[0m               Try Again
+ [2m140[0m | [35;1m|[0m             </button>
+ [2m141[0m | [35;1m|[0m           </div>
+ [2m142[0m | [35;1m|[0m         </div>
+ [2m143[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m     );
+ [2m144[0m |       }
+ [2m145[0m |     
+ [2m146[0m |       return (
+     `----
+  [31mx[0m Return statement is not allowed here
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:146:1]
+ [2m143[0m |         );
+ [2m144[0m |       }
+ [2m145[0m |     
+ [2m146[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m   return (
+ [2m147[0m | [35;1m|[0m       <div className="flex-1 bg-black text-white p-6">
+ [2m148[0m | [35;1m|[0m         {/* Header */}
+ [2m149[0m | [35;1m|[0m         <div className="mb-8 flex justify-between items-start">
+ [2m150[0m | [35;1m|[0m           <div>
+ [2m151[0m | [35;1m|[0m             <h1 className="text-3xl font-bold mb-2">Crypto Screener</h1>
+ [2m152[0m | [35;1m|[0m             <p className="text-zinc-400">Discover and analyze cryptocurrency markets</p>
+ [2m153[0m | [35;1m|[0m           </div>
+ [2m154[0m | [35;1m|[0m           <button
+ [2m155[0m | [35;1m|[0m             onClick={() => loadScreenerData()}
+ [2m156[0m | [35;1m|[0m             className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m157[0m | [35;1m|[0m           >
+ [2m158[0m | [35;1m|[0m             <RefreshCw className="w-4 h-4" />
+ [2m159[0m | [35;1m|[0m             Refresh
+ [2m160[0m | [35;1m|[0m           </button>
+ [2m161[0m | [35;1m|[0m         </div>
+ [2m162[0m | [35;1m|[0m   
+ [2m163[0m | [35;1m|[0m         {/* Filters */}
+ [2m164[0m | [35;1m|[0m         <div className="mb-6 flex flex-wrap gap-4 items-center">
+ [2m165[0m | [35;1m|[0m           {/* Blockchain Filter */}
+ [2m166[0m | [35;1m|[0m           <div className="flex gap-2">
+ [2m167[0m | [35;1m|[0m             {blockchains.map(blockchain => (
+ [2m168[0m | [35;1m|[0m               <button
+ [2m169[0m | [35;1m|[0m                 key={blockchain.id}
+ [2m170[0m | [35;1m|[0m                 onClick={() => setSelectedBlockchain(blockchain.id)}
+ [2m171[0m | [35;1m|[0m                 className={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${
+ [2m172[0m | [35;1m|[0m                   selectedBlockchain === blockchain.id
+ [2m173[0m | [35;1m|[0m                     ? 'bg-blue-600 text-white'
+ [2m174[0m | [35;1m|[0m                     : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+ [2m175[0m | [35;1m|[0m                 }`}
+ [2m176[0m | [35;1m|[0m               >
+ [2m177[0m | [35;1m|[0m                 <span>{blockchain.icon}</span>
+ [2m178[0m | [35;1m|[0m                 {blockchain.name}
+ [2m179[0m | [35;1m|[0m               </button>
+ [2m180[0m | [35;1m|[0m             ))}
+ [2m181[0m | [35;1m|[0m           </div>
+ [2m182[0m | [35;1m|[0m   
+ [2m183[0m | [35;1m|[0m           {/* Search */}
+ [2m184[0m | [35;1m|[0m           <div className="relative flex-1 max-w-md">
+ [2m185[0m | [35;1m|[0m             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
+ [2m186[0m | [35;1m|[0m             <input
+ [2m187[0m | [35;1m|[0m               type="text"
+ [2m188[0m | [35;1m|[0m               placeholder="Search coins..."
+ [2m189[0m | [35;1m|[0m               value={searchTerm}
+ [2m190[0m | [35;1m|[0m               onChange={(e) => setSearchTerm(e.target.value)}
+ [2m191[0m | [35;1m|[0m               className="w-full bg-zinc-800 text-white pl-10 pr-4 py-2 rounded-lg border border-zinc-700 focus:border-blue-500 focus:outline-none"
+ [2m192[0m | [35;1m|[0m             />
+ [2m193[0m | [35;1m|[0m           </div>
+ [2m194[0m | [35;1m|[0m   
+ [2m195[0m | [35;1m|[0m           {/* Filter Button */}
+ [2m196[0m | [35;1m|[0m           <button
+ [2m197[0m | [35;1m|[0m             onClick={() => setShowFilters(!showFilters)}
+ [2m198[0m | [35;1m|[0m             className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded font-medium transition-colors"
+ [2m199[0m | [35;1m|[0m           >
+ [2m200[0m | [35;1m|[0m             <Filter className="w-4 h-4" />
+ [2m201[0m | [35;1m|[0m             Filters
+ [2m202[0m | [35;1m|[0m           </button>
+ [2m203[0m | [35;1m|[0m         </div>
+ [2m204[0m | [35;1m|[0m   
+ [2m205[0m | [35;1m|[0m         {/* Results Count */}
+ [2m206[0m | [35;1m|[0m         <div className="mb-4 flex items-center gap-4">
+ [2m207[0m | [35;1m|[0m           <p className="text-zinc-400">
+ [2m208[0m | [35;1m|[0m             Showing {filteredCoins.length} coins
+ [2m209[0m | [35;1m|[0m           </p>
+ [2m210[0m | [35;1m|[0m           {selectedBlockchain !== 'all' && (
+ [2m211[0m | [35;1m|[0m             <span className="text-sm text-blue-400">
+ [2m212[0m | [35;1m|[0m               Filtered by {blockchains.find(b => b.id === selectedBlockchain)?.name}
+ [2m213[0m | [35;1m|[0m             </span>
+ [2m214[0m | [35;1m|[0m           )}
+ [2m215[0m | [35;1m|[0m         </div>
+ [2m216[0m | [35;1m|[0m   
+ [2m217[0m | [35;1m|[0m         {/* Coins Table */}
+ [2m218[0m | [35;1m|[0m         <div className="bg-zinc-900 rounded-lg border border-zinc-800 overflow-hidden">
+ [2m219[0m | [35;1m|[0m           <div className="overflow-x-auto">
+ [2m220[0m | [35;1m|[0m             <table className="w-full">
+ [2m221[0m | [35;1m|[0m               <thead>
+ [2m222[0m | [35;1m|[0m                 <tr className="text-zinc-400 text-sm border-b border-zinc-800">
+ [2m223[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m224[0m | [35;1m|[0m                     <button
+ [2m225[0m | [35;1m|[0m                       onClick={() => handleSort('rank')}
+ [2m226[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m227[0m | [35;1m|[0m                     >
+ [2m228[0m | [35;1m|[0m                       RANK
+ [2m229[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m230[0m | [35;1m|[0m                     </button>
+ [2m231[0m | [35;1m|[0m                   </th>
+ [2m232[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">COIN</th>
+ [2m233[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m234[0m | [35;1m|[0m                     <button
+ [2m235[0m | [35;1m|[0m                       onClick={() => handleSort('price')}
+ [2m236[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m237[0m | [35;1m|[0m                     >
+ [2m238[0m | [35;1m|[0m                       PRICE
+ [2m239[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m240[0m | [35;1m|[0m                     </button>
+ [2m241[0m | [35;1m|[0m                   </th>
+ [2m242[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m243[0m | [35;1m|[0m                     <button
+ [2m244[0m | [35;1m|[0m                       onClick={() => handleSort('change24h')}
+ [2m245[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m246[0m | [35;1m|[0m                     >
+ [2m247[0m | [35;1m|[0m                       24H CHANGE
+ [2m248[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m249[0m | [35;1m|[0m                     </button>
+ [2m250[0m | [35;1m|[0m                   </th>
+ [2m251[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m252[0m | [35;1m|[0m                     <button
+ [2m253[0m | [35;1m|[0m                       onClick={() => handleSort('volume24h')}
+ [2m254[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m255[0m | [35;1m|[0m                     >
+ [2m256[0m | [35;1m|[0m                       24H VOLUME
+ [2m257[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m258[0m | [35;1m|[0m                     </button>
+ [2m259[0m | [35;1m|[0m                   </th>
+ [2m260[0m | [35;1m|[0m                   <th className="text-left p-4 font-medium">
+ [2m261[0m | [35;1m|[0m                     <button
+ [2m262[0m | [35;1m|[0m                       onClick={() => handleSort('marketCap')}
+ [2m263[0m | [35;1m|[0m                       className="flex items-center gap-1 hover:text-white transition-colors"
+ [2m264[0m | [35;1m|[0m                     >
+ [2m265[0m | [35;1m|[0m                       MARKET CAP
+ [2m266[0m | [35;1m|[0m                       <ArrowUpDown className="w-3 h-3" />
+ [2m267[0m | [35;1m|[0m                     </button>
+ [2m268[0m | [35;1m|[0m                   </th>
+ [2m269[0m | [35;1m|[0m                   {isAuthenticated && (
+ [2m270[0m | [35;1m|[0m                     <th className="text-left p-4 font-medium">ACTION</th>
+ [2m271[0m | [35;1m|[0m                   )}
+ [2m272[0m | [35;1m|[0m                 </tr>
+ [2m273[0m | [35;1m|[0m               </thead>
+ [2m274[0m | [35;1m|[0m               <tbody>
+ [2m275[0m | [35;1m|[0m                 {filteredCoins.map((coin) => (
+ [2m276[0m | [35;1m|[0m                   <tr key={coin.id} className="border-b border-zinc-800 hover:bg-zinc-800/50 cursor-pointer">
+ [2m277[0m | [35;1m|[0m                     <td className="p-4">
+ [2m278[0m | [35;1m|[0m                       <span className="text-zinc-400 font-medium">#{coin.rank}</span>
+ [2m279[0m | [35;1m|[0m                     </td>
+ [2m280[0m | [35;1m|[0m                     <td className="p-4">
+ [2m281[0m | [35;1m|[0m                       <div className="flex items-center gap-3">
+ [2m282[0m | [35;1m|[0m                         {coin.image ? (
+ [2m283[0m | [35;1m|[0m                           <Image
+ [2m284[0m | [35;1m|[0m                             src={coin.image}
+ [2m285[0m | [35;1m|[0m                             alt={coin.name}
+ [2m286[0m | [35;1m|[0m                             width={32}
+ [2m287[0m | [35;1m|[0m                             height={32}
+ [2m288[0m | [35;1m|[0m                             className="rounded-full"
+ [2m289[0m | [35;1m|[0m                           />
+ [2m290[0m | [35;1m|[0m                         ) : (
+ [2m291[0m | [35;1m|[0m                           <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">
+ [2m292[0m | [35;1m|[0m                             <span className="text-xs font-medium text-white">
+ [2m293[0m | [35;1m|[0m                               {coin.symbol.slice(0, 2).toUpperCase()}
+ [2m294[0m | [35;1m|[0m                             </span>
+ [2m295[0m | [35;1m|[0m                           </div>
+ [2m296[0m | [35;1m|[0m                         )}
+ [2m297[0m | [35;1m|[0m                         <div>
+ [2m298[0m | [35;1m|[0m                           <p className="font-medium text-white">{coin.symbol}</p>
+ [2m299[0m | [35;1m|[0m                           <p className="text-sm text-zinc-400">{coin.name}</p>
+ [2m300[0m | [35;1m|[0m                         </div>
+ [2m301[0m | [35;1m|[0m                       </div>
+ [2m302[0m | [35;1m|[0m                     </td>
+ [2m303[0m | [35;1m|[0m                     <td className="p-4">
+ [2m304[0m | [35;1m|[0m                       <p className="text-white font-medium">{formatPrice(coin.price)}</p>
+ [2m305[0m | [35;1m|[0m                     </td>
+ [2m306[0m | [35;1m|[0m                     <td className="p-4">
+ [2m307[0m | [35;1m|[0m                       <div className="flex items-center gap-1">
+ [2m308[0m | [35;1m|[0m                         {(coin.change24h || 0) >= 0 ? (
+ [2m309[0m | [35;1m|[0m                           <TrendingUp className="w-3 h-3 text-green-400" />
+ [2m310[0m | [35;1m|[0m                         ) : (
+ [2m311[0m | [35;1m|[0m                           <TrendingDown className="w-3 h-3 text-red-400" />
+ [2m312[0m | [35;1m|[0m                         )}
+ [2m313[0m | [35;1m|[0m                         <p className={`font-medium ${
+ [2m314[0m | [35;1m|[0m                           (coin.change24h || 0) >= 0 ? 'text-green-400' : 'text-red-400'
+ [2m315[0m | [35;1m|[0m                         }`}>
+ [2m316[0m | [35;1m|[0m                           {(coin.change24h || 0) >= 0 ? '+' : ''}{coin.change24h?.toFixed(2) || '0.00'}%
+ [2m317[0m | [35;1m|[0m                         </p>
+ [2m318[0m | [35;1m|[0m                       </div>
+ [2m319[0m | [35;1m|[0m                     </td>
+ [2m320[0m | [35;1m|[0m                     <td className="p-4">
+ [2m321[0m | [35;1m|[0m                       <p className="text-white">{formatCurrency(coin.volume24h)}</p>
+ [2m322[0m | [35;1m|[0m                     </td>
+ [2m323[0m | [35;1m|[0m                     <td className="p-4">
+ [2m324[0m | [35;1m|[0m                       <p className="text-white">{formatCurrency(coin.marketCap)}</p>
+ [2m325[0m | [35;1m|[0m                     </td>
+ [2m326[0m | [35;1m|[0m                     {isAuthenticated && (
+ [2m327[0m | [35;1m|[0m                       <td className="p-4">
+ [2m328[0m | [35;1m|[0m                         <button
+ [2m329[0m | [35;1m|[0m                           onClick={() => handleBuy(coin)}
+ [2m330[0m | [35;1m|[0m                           className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-sm font-medium transition-colors"
+ [2m331[0m | [35;1m|[0m                         >
+ [2m332[0m | [35;1m|[0m                           <ShoppingCart className="w-3 h-3" />
+ [2m333[0m | [35;1m|[0m                           Buy
+ [2m334[0m | [35;1m|[0m                         </button>
+ [2m335[0m | [35;1m|[0m                       </td>
+ [2m336[0m | [35;1m|[0m                     )}
+ [2m337[0m | [35;1m|[0m                   </tr>
+ [2m338[0m | [35;1m|[0m                 ))}
+ [2m339[0m | [35;1m|[0m               </tbody>
+ [2m340[0m | [35;1m|[0m             </table>
+ [2m341[0m | [35;1m|[0m           </div>
+ [2m342[0m | [35;1m|[0m         </div>
+ [2m343[0m | [35;1m|[0m   
+ [2m344[0m | [35;1m|[0m         {filteredCoins.length === 0 && !loading && (
+ [2m345[0m | [35;1m|[0m           <div className="text-center py-12">
+ [2m346[0m | [35;1m|[0m             <BarChart3 className="w-16 h-16 text-zinc-400 mx-auto mb-4" />
+ [2m347[0m | [35;1m|[0m             <h3 className="text-lg font-semibold mb-2">No coins found</h3>
+ [2m348[0m | [35;1m|[0m             <p className="text-zinc-400">Try adjusting your search or filters</p>
+ [2m349[0m | [35;1m|[0m           </div>
+ [2m350[0m | [35;1m|[0m         )}
+ [2m351[0m | [35;1m|[0m   
+ [2m352[0m | [35;1m|[0m         {selectedCoin && (
+ [2m353[0m | [35;1m|[0m           <BuyModal
+ [2m354[0m | [35;1m|[0m             isOpen={showBuyModal}
+ [2m355[0m | [35;1m|[0m             onClose={() => setShowBuyModal(false)}
+ [2m356[0m | [35;1m|[0m             coin={selectedCoin}
+ [2m357[0m | [35;1m|[0m           />
+ [2m358[0m | [35;1m|[0m         )}
+ [2m359[0m | [35;1m|[0m       </div>
+ [2m360[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m   );
+ [2m361[0m |     }
+     `----
+  [31mx[0m Expression expected
+     ,-[[36;1;4m/Users/sanvadshende/Downloads/trado-main/components/screener/screener-page.tsx[0m:361:1]
+ [2m358[0m |       )}
+ [2m359[0m |     </div>
+ [2m360[0m |   );
+ [2m361[0m | }
+     : [35;1m^[0m
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/screener/screener-page.tsx
+./app/(trading)/screener/page.tsx
+ ✓ Compiled in 666ms (1169 modules)
+ ✓ Compiled in 105ms (631 modules)
+ ✓ Compiled in 132ms (631 modules)
+ ✓ Compiled in 224ms (1169 modules)
+ ✓ Compiled in 223ms (1169 modules)
+ ✓ Compiled in 233ms (1169 modules)
+ ✓ Compiled in 262ms (1169 modules)
+ ✓ Compiled in 156ms (631 modules)
+ ✓ Compiled in 121ms (631 modules)
+ ✓ Compiled in 412ms (631 modules)
+ ✓ Compiled in 154ms (631 modules)
+ ✓ Compiled in 137ms (631 modules)
+ ✓ Compiled in 131ms (631 modules)
+ ✓ Compiled in 276ms (631 modules)
+ ✓ Compiled in 632ms (1169 modules)
+ ⚠ Found a change in next.config.js. Restarting the server to apply the changes...
+   ▲ Next.js 15.3.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.4:3000
+
+ ✓ Starting...
+[SyntaxError: Unexpected end of JSON input] { line: 1, column: 0 }
+[?25h

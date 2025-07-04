@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
+import { AuthProvider } from "@/lib/auth-context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Trado - Cryptocurrency Perpetual Trading",
+  title: "Crypto Portfolio & Screener",
   description:
-    "Advanced cryptocurrency perpetual trading platform with real-time data and professional tools",
+    "Track your cryptocurrency investments and discover new opportunities with our powerful portfolio management and market screening tools",
 };
 
 export default function RootLayout({
@@ -29,10 +30,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white min-h-screen`}
       >
-        <Header />
-        <main className="min-h-[calc(100vh-3.5rem)] overflow-hidden">
-          {children}
-        </main>
+        <AuthProvider>
+          <Header />
+          <main className="min-h-[calc(100vh-3.5rem)] overflow-hidden">
+            {children}
+          </main>
+        </AuthProvider>
       </body>
     </html>
   );

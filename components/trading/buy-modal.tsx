@@ -1,120 +1,71 @@
 "use client";
 
-import { useState } from 'react';
-import { X, ShoppingCart, Loader2, TrendingUp, AlertCircle } from 'lucide-react';
-import { useAuth } from '@/lib/auth';
-import { authService } from '@/lib/auth';
-import { CoinData } from '@/types/trading';
-import Image from 'next/image';
+import { useState } from "react";
+import Image from "next/image";
+import { X, ShoppingCart, Loader2 } from "lucide-react";
+import { useAuth } from "@/lib/auth-context";
+import { saveTransaction, Transaction } from "@/lib/portfolio-storage";
 
 interface BuyModalProps {
   isOpen: boolean;
   onClose: () => void;
-  coin: CoinData | null;
+  coin: {
+    id: string;
+    symbol: string;
+    name: string;
+    price: number;
+    image?: string;
+  };
 }
 
 export function BuyModal({ isOpen, onClose, coin }: BuyModalProps) {
-  const { user, refreshUser } = useAuth();
-  const [amount, setAmount] = useState('');
+  const [amount, setAmount] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState('');
+  const { user } = useAuth();
 
-  if (!isOpen || !coin) return null;
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!user || !amount || parseFloat(amount) <= 0) return;
 
-  const handleBuy = async () => {
-    if (!user) return;
-    
     setLoading(true);
-    setError('');
     
     try {
-      const purchaseAmount = parseFloat(amount);
-      const totalCost = purchaseAmount * coin.price;
-      
-      if (isNaN(purchaseAmount) || purchaseAmount <= 0) {
-        setError('Please enter a valid amount');
-        return;
-      }
-      
-      if (totalCost > user.balance) {
-        setError('Insufficient balance');
-        return;
-      }
-      
-      // Simulate purchase delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Update balance
-      const newBalance = user.balance - totalCost;
-      authService.updateBalance(newBalance);
-      
-      // Add to portfolio
-      authService.addToPortfolio({
-        id: coin.id,
+      const transaction: Transaction = {
+        id: Date.now().toString(),
+        coinId: coin.id,
         symbol: coin.symbol,
         name: coin.name,
-        amount: purchaseAmount,
+        amount: parseFloat(amount),
         price: coin.price,
-        purchasePrice: coin.price,
-        blockchain: coin.blockchain,
-        purchaseDate: new Date().toISOString(),
-        iconUrl: coin.iconUrl
-      });
-      
-      // Refresh user data
-      refreshUser();
-      
+        type: 'buy',
+        timestamp: new Date(),
+        userId: user.id
+      };
+
+      saveTransaction(transaction);
       setSuccess(true);
-      setAmount('');
       
-      // Close modal after 2 seconds
       setTimeout(() => {
         setSuccess(false);
         onClose();
+        setAmount('');
       }, 2000);
-      
-    } catch (err) {
-      setError('Purchase failed. Please try again.');
+    } catch (error) {
+      console.error('Error buying token:', error);
     } finally {
       setLoading(false);
     }
   };
 
-  const totalCost = amount ? parseFloat(amount) * coin.price : 0;
-  const canAfford = user ? totalCost <= user.balance : false;
+  const totalCost = amount ? (parseFloat(amount) * coin.price).toFixed(2) : '0.00';
 
-  const formatBalance = (balance: number) => {
-    if (balance >= 1000000) return `${(balance / 1000000).toFixed(1)}M`;
-    if (balance >= 1000) return `${(balance / 1000).toFixed(1)}K`;
-    return balance.toFixed(0);
-  };
-
-  if (success) {
-    return (
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-        <div className="bg-zinc-900 rounded-lg p-6 w-full max-w-md mx-4">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <ShoppingCart className="w-8 h-8 text-white" />
-            </div>
-            <h2 className="text-xl font-bold text-white mb-2">Purchase Successful!</h2>
-            <p className="text-zinc-300 mb-4">
-              You've successfully purchased {amount} {coin.symbol} tokens
-            </p>
-            <div className="w-full bg-gray-200 rounded-full h-2">
-              <div className="bg-green-500 h-2 rounded-full animate-pulse" style={{ width: '100%' }}></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-zinc-900 rounded-lg p-6 w-full max-w-md mx-4">
-        <div className="flex justify-between items-center mb-6">
+      <div className="bg-zinc-900 rounded-lg p-6 w-full max-w-md mx-4 border border-zinc-800">
+        <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-bold text-white">Buy {coin.symbol}</h2>
           <button
             onClick={onClose}
@@ -124,93 +75,94 @@ export function BuyModal({ isOpen, onClose, coin }: BuyModalProps) {
           </button>
         </div>
 
-        <div className="mb-6">
-          <div className="flex items-center gap-3 p-4 bg-zinc-800 rounded-lg">
-            <Image
-              src={coin.iconUrl}
-              alt={coin.symbol}
-              width={40}
-              height={40}
-              className="rounded-full"
-            />
-            <div className="flex-1">
-              <h3 className="text-white font-medium">{coin.name}</h3>
-              <p className="text-zinc-400 text-sm">{coin.symbol}/{coin.blockchain.toUpperCase()}</p>
+        {success ? (
+          <div className="text-center py-8">
+            <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <ShoppingCart className="w-8 h-8 text-white" />
             </div>
-            <div className="text-right">
-              <p className="text-white font-medium">${coin.price.toFixed(6)}</p>
-              <p className={`text-sm ${coin.changes.h24 >= 0 ? 'text-green-400' : 'text-red-400'}`}>
-                {coin.changes.h24 >= 0 ? '+' : ''}{coin.changes.h24.toFixed(2)}%
-              </p>
-            </div>
+            <h3 className="text-lg font-semibold text-white mb-2">Purchase Successful!</h3>
+            <p className="text-zinc-400">
+              You bought {amount} {coin.symbol} for ${totalCost}
+            </p>
           </div>
-        </div>
-
-        <div className="space-y-4">
-          <div>
-            <label className="block text-zinc-300 text-sm font-medium mb-2">
-              Amount to Buy
-            </label>
-            <input
-              type="number"
-              placeholder="0.00"
-              value={amount}
-              onChange={(e) => setAmount(e.target.value)}
-              className="w-full bg-zinc-800 text-white px-4 py-3 rounded-lg border border-zinc-700 focus:border-blue-500 focus:outline-none"
-              min="0"
-              step="0.000001"
-            />
-          </div>
-
-          <div className="bg-zinc-800 rounded-lg p-4 space-y-2">
-            <div className="flex justify-between text-sm">
-              <span className="text-zinc-400">Price per token:</span>
-              <span className="text-white">${coin.price.toFixed(6)}</span>
-            </div>
-            <div className="flex justify-between text-sm">
-              <span className="text-zinc-400">Total cost:</span>
-              <span className="text-white">{totalCost.toFixed(2)} tokens</span>
-            </div>
-            <div className="flex justify-between text-sm">
-              <span className="text-zinc-400">Your balance:</span>
-              <span className="text-white">{user ? formatBalance(user.balance) : '0'} tokens</span>
-            </div>
-            {!canAfford && amount && (
-              <div className="flex items-center gap-2 text-red-400 text-sm">
-                <AlertCircle className="w-4 h-4" />
-                <span>Insufficient balance</span>
+        ) : (
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="flex items-center gap-3 p-3 bg-zinc-800 rounded-lg">
+              {coin.image && (
+                <Image
+                  src={coin.image}
+                  alt={coin.name}
+                  width={40}
+                  height={40}
+                  className="rounded-full"
+                />
+              )}
+              <div>
+                <p className="font-medium text-white">{coin.name}</p>
+                <p className="text-sm text-zinc-400">{coin.symbol}</p>
               </div>
-            )}
-          </div>
+              <div className="ml-auto text-right">
+                <p className="text-white font-medium">${coin.price.toFixed(6)}</p>
+              </div>
+            </div>
 
-          {error && (
-            <p className="text-red-400 text-sm">{error}</p>
-          )}
+            <div>
+              <label className="block text-sm font-medium text-zinc-300 mb-1">
+                Amount to buy
+              </label>
+              <div className="relative">
+                <input
+                  type="number"
+                  value={amount}
+                  onChange={(e) => setAmount(e.target.value)}
+                  className="w-full bg-zinc-800 text-white px-4 py-2 rounded-lg border border-zinc-700 focus:border-blue-500 focus:outline-none"
+                  placeholder="Enter amount"
+                  step="0.000001"
+                  min="0"
+                  required
+                />
+                <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400">
+                  {coin.symbol}
+                </span>
+              </div>
+            </div>
 
-          <button
-            onClick={handleBuy}
-            disabled={loading || !amount || !canAfford || !user}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-          >
-            {loading ? (
-              <>
-                <Loader2 className="w-4 h-4 animate-spin" />
-                Processing...
-              </>
-            ) : (
-              <>
-                <ShoppingCart className="w-4 h-4" />
-                Buy {coin.symbol}
-              </>
-            )}
-          </button>
-        </div>
+            <div className="bg-zinc-800 rounded-lg p-3">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-zinc-400">Total Cost:</span>
+                <span className="text-white font-medium">${totalCost}</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-zinc-400">Price per token:</span>
+                <span className="text-white">${coin.price.toFixed(6)}</span>
+              </div>
+            </div>
 
-        <div className="mt-4 p-3 bg-zinc-800 rounded-lg">
-          <p className="text-zinc-300 text-sm">
-            💡 <strong>Note:</strong> This is a test environment. All purchases are made with test tokens.
-          </p>
-        </div>
+            <div className="flex gap-3">
+              <button
+                type="button"
+                onClick={onClose}
+                className="flex-1 bg-zinc-700 hover:bg-zinc-600 text-white py-2 rounded-lg font-medium transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                disabled={loading || !amount || parseFloat(amount) <= 0}
+                className="flex-1 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white py-2 rounded-lg font-medium transition-colors flex items-center justify-center"
+              >
+                {loading ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : (
+                  <>
+                    <ShoppingCart className="w-4 h-4 mr-2" />
+                    Buy
+                  </>
+                )}
+              </button>
+            </div>
+          </form>
+        )}
       </div>
     </div>
   );

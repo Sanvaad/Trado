@@ -2,8 +2,18 @@
 
 import { useState } from 'react';
 import { X, Loader2, DollarSign, TrendingDown, AlertCircle } from 'lucide-react';
-import { PortfolioItem } from '@/lib/auth';
-import { useAuth } from '@/lib/auth';
+import { saveTransaction, Transaction } from '@/lib/portfolio-storage';
+import { useAuth } from '@/lib/auth-context';
+
+interface PortfolioItem {
+  id: string;
+  symbol: string;
+  name: string;
+  amount: number;
+  price: number;
+  purchasePrice: number;
+  purchaseDate: string;
+}
 
 interface SellModalProps {
   coin: PortfolioItem;
@@ -16,7 +26,7 @@ export function SellModal({ coin, isOpen, onClose, onSellComplete }: SellModalPr
   const [amount, setAmount] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const { sellCoin } = useAuth();
+  const { user } = useAuth();
 
   if (!isOpen) return null;
 
@@ -30,20 +40,28 @@ export function SellModal({ coin, isOpen, onClose, onSellComplete }: SellModalPr
     setError('');
 
     try {
-      if (!isValidAmount) {
+      if (!isValidAmount || !user) {
         setError('Please enter a valid amount');
         return;
       }
 
-      const result = sellCoin(coin.id, amountNumber);
-      
-      if (result.success) {
-        onSellComplete();
-        setAmount('');
-      } else {
-        setError(result.error || 'Failed to sell coin');
-      }
-    } catch (err) {
+      const transaction: Transaction = {
+        id: Date.now().toString(),
+        coinId: coin.id,
+        symbol: coin.symbol,
+        name: coin.name,
+        amount: amountNumber,
+        price: coin.price,
+        type: 'sell',
+        timestamp: new Date(),
+        userId: user.id
+      };
+
+      saveTransaction(transaction);
+      onSellComplete();
+      setAmount('');
+      onClose();
+    } catch {
       setError('An error occurred while selling');
     } finally {
       setLoading(false);

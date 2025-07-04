@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { 
   TrendingUp, 
   TrendingDown, 
@@ -10,18 +10,99 @@ import {
   Plus,
   Calendar,
   ArrowUpDown,
-  Loader2
+  Loader2,
+  RefreshCw
 } from "lucide-react";
-import { useAuth } from "@/lib/auth";
+import { getPortfolio } from "@/lib/portfolio-storage";
+import { useAuth } from "@/lib/auth-context";
 import { SellModal } from "./sell-modal";
-import { PortfolioItem } from "@/lib/auth";
+
+interface PortfolioItem {
+  id: string;
+  symbol: string;
+  name: string;
+  amount: number;
+  price: number;
+  purchasePrice: number;
+  purchaseDate: string;
+}
 
 export function PortfolioPage() {
-  const { user, refreshUser, loading } = useAuth();
+  const [portfolio, setPortfolio] = useState<PortfolioItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [selectedCoin, setSelectedCoin] = useState<PortfolioItem | null>(null);
   const [showSellModal, setShowSellModal] = useState(false);
   const [sortBy, setSortBy] = useState<'value' | 'amount' | 'pnl'>('value');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+  const { user, isAuthenticated } = useAuth();
+
+  const loadPortfolioData = useCallback(async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      
+      if (!user) {
+        setPortfolio([]);
+        return;
+      }
+
+      const userPortfolio = getPortfolio(user.id);
+      const portfolioItems: PortfolioItem[] = [];
+
+      // Get current prices from CoinGecko API
+      for (const [coinId, coinData] of Object.entries(userPortfolio)) {
+        try {
+          const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${coinId}&vs_currencies=usd`);
+          const priceData = await response.json();
+          const currentPrice = priceData[coinId]?.usd || coinData.averagePrice;
+
+          portfolioItems.push({
+            id: coinId,
+            symbol: coinData.symbol,
+            name: coinData.name,
+            amount: coinData.totalAmount,
+            price: currentPrice,
+            purchasePrice: coinData.averagePrice,
+            purchaseDate: coinData.transactions[0]?.timestamp instanceof Date ? coinData.transactions[0].timestamp.toISOString() : coinData.transactions[0]?.timestamp || new Date().toISOString()
+          });
+        } catch {
+          // If API fails, use stored data
+          portfolioItems.push({
+            id: coinId,
+            symbol: coinData.symbol,
+            name: coinData.name,
+            amount: coinData.totalAmount,
+            price: coinData.averagePrice,
+            purchasePrice: coinData.averagePrice,
+            purchaseDate: coinData.transactions[0]?.timestamp instanceof Date ? coinData.transactions[0].timestamp.toISOString() : coinData.transactions[0]?.timestamp || new Date().toISOString()
+          });
+        }
+      }
+
+      setPortfolio(portfolioItems);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to load portfolio data');
+    } finally {
+      setLoading(false);
+    }
+  }, [user]);
+
+  useEffect(() => {
+    loadPortfolioData();
+  }, [user, loadPortfolioData]);
+
+  if (!isAuthenticated) {
+    return (
+      <div className="flex-1 bg-black text-white flex items-center justify-center">
+        <div className="text-center">
+          <Wallet className="w-16 h-16 text-zinc-400 mx-auto mb-4" />
+          <h2 className="text-2xl font-bold mb-2">Login Required</h2>
+          <p className="text-zinc-400">Please login to view your portfolio</p>
+        </div>
+      </div>
+    );
+  }
 
   if (loading) {
     return (
@@ -35,25 +116,31 @@ export function PortfolioPage() {
     );
   }
 
-  if (!user) {
+  if (error) {
     return (
       <div className="flex-1 bg-black text-white flex items-center justify-center">
         <div className="text-center">
-          <Wallet className="w-16 h-16 text-zinc-400 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold mb-2">Sign in to view your portfolio</h2>
-          <p className="text-zinc-400">Track your crypto investments and trading performance</p>
+          <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span className="text-white text-2xl">!</span>
+          </div>
+          <h2 className="text-2xl font-bold mb-2">Error Loading Portfolio</h2>
+          <p className="text-zinc-400 mb-4">{error}</p>
+          <button
+            onClick={loadPortfolioData}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-medium transition-colors"
+          >
+            Try Again
+          </button>
         </div>
       </div>
     );
   }
 
-  const portfolio = user.portfolio || [];
-  
-  // Calculate total portfolio value
+  // Calculate portfolio totals
   const totalValue = portfolio.reduce((sum, item) => sum + (item.amount * item.price), 0);
   const totalCost = portfolio.reduce((sum, item) => sum + (item.amount * item.purchasePrice), 0);
   const totalPnL = totalValue - totalCost;
-  const totalPnLPercentage = totalCost > 0 ? ((totalPnL / totalCost) * 100) : 0;
+  const totalPnLPercentage = totalCost > 0 ? (totalPnL / totalCost) * 100 : 0;
 
   // Sort portfolio
   const sortedPortfolio = [...portfolio].sort((a, b) => {
@@ -97,7 +184,7 @@ export function PortfolioPage() {
   const handleSellComplete = () => {
     setShowSellModal(false);
     setSelectedCoin(null);
-    refreshUser();
+    loadPortfolioData(); // Refresh portfolio data
   };
 
   const formatCurrency = (amount: number) => {
@@ -118,9 +205,18 @@ export function PortfolioPage() {
   return (
     <div className="flex-1 bg-black text-white p-6">
       {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">Portfolio</h1>
-        <p className="text-zinc-400">Track your crypto investments and trading performance</p>
+      <div className="mb-8 flex justify-between items-start">
+        <div>
+          <h1 className="text-3xl font-bold mb-2">Portfolio</h1>
+          <p className="text-zinc-400">Track your crypto investments and trading performance</p>
+        </div>
+        <button
+          onClick={loadPortfolioData}
+          className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded font-medium transition-colors"
+        >
+          <RefreshCw className="w-4 h-4" />
+          Refresh
+        </button>
       </div>
 
       {/* Portfolio Summary */}
@@ -131,8 +227,8 @@ export function PortfolioPage() {
               <Wallet className="w-5 h-5 text-white" />
             </div>
             <div>
-              <p className="text-zinc-400 text-sm">Total Balance</p>
-              <p className="text-white text-sm font-medium">{user.balance.toFixed(2)} tokens</p>
+              <p className="text-zinc-400 text-sm">Total Holdings</p>
+              <p className="text-white text-sm font-medium">{portfolio.length} assets</p>
             </div>
           </div>
         </div>
@@ -182,7 +278,7 @@ export function PortfolioPage() {
           <div className="p-12 text-center">
             <Wallet className="w-16 h-16 text-zinc-400 mx-auto mb-4" />
             <h3 className="text-lg font-semibold mb-2">No holdings yet</h3>
-            <p className="text-zinc-400">Start trading to build your portfolio</p>
+            <p className="text-zinc-400">Your portfolio is empty</p>
           </div>
         ) : (
           <div className="overflow-x-auto">

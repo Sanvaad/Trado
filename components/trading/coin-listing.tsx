@@ -1,17 +1,38 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import {
-  Loader2,
-  Flame,
-  BarChart3,
-  TrendingUp,
-  ShoppingCart
-} from "lucide-react";
-import { CoinData, Blockchain } from "@/types/trading";
+import { Loader2, Flame, BarChart3 } from "lucide-react";
+// Define types locally since @/types/trading doesn't exist
+interface Blockchain {
+  id: string;
+  name: string;
+}
+
+interface CoinData {
+  id: string;
+  rank: number;
+  symbol: string;
+  name: string;
+  price: number;
+  age: string;
+  txns: number;
+  volume: number;
+  makers: number;
+  changes: {
+    m5: number;
+    h1: number;
+    h6: number;
+    h24: number;
+  };
+  liquidity: number;
+  mcap: number;
+  blockchain: string;
+  iconUrl: string;
+  isTopGainer?: boolean;
+  isNewPair?: boolean;
+}
 import Image from "next/image";
 import { getCoinIcon } from "@/lib/crypto-images";
-import { BuyModal } from "./buy-modal";
 
 interface CoinListingProps {
   selectedBlockchain?: Blockchain;
@@ -21,16 +42,15 @@ export function CoinListing({ selectedBlockchain }: CoinListingProps) {
   const [coins, setCoins] = useState<CoinData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [activeTimeFrame, setActiveTimeFrame] = useState("6H");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [activeTimeFrame, setActiveTimeFrame] = useState("5M");
   const [activeFilters, setActiveFilters] = useState({
-    trending: false,
+    trending: true,
     top: false,
     gainers: false,
     newPairs: false,
   });
   const [imageErrors, setImageErrors] = useState<Set<string>>(new Set());
-  const [selectedCoin, setSelectedCoin] = useState<CoinData | null>(null);
-  const [showBuyModal, setShowBuyModal] = useState(false);
 
   // Fetch coins data
   useEffect(() => {
@@ -40,7 +60,9 @@ export function CoinListing({ selectedBlockchain }: CoinListingProps) {
 
       try {
         const blockchain = selectedBlockchain?.id || "solana";
-        const url = `/api/coins/${blockchain}?limit=20`;
+        const url = searchQuery
+          ? `/api/coins/search?q=${encodeURIComponent(searchQuery)}&blockchain=${blockchain}`
+          : `/api/coins/${blockchain}?limit=20`;
 
         const response = await fetch(url);
         const data = await response.json();
@@ -59,12 +81,29 @@ export function CoinListing({ selectedBlockchain }: CoinListingProps) {
     };
 
     fetchCoins();
-  }, [selectedBlockchain?.id]);
+  }, [selectedBlockchain?.id, searchQuery]);
 
+  // Debounced search
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      // Trigger search after 500ms delay
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
 
   // Filter and sort coins based on active filters
   const filteredAndSortedCoins = () => {
     let filtered = [...coins];
+
+    // Apply search filter
+    if (searchQuery.trim()) {
+      filtered = filtered.filter(
+        (coin) =>
+          coin.symbol.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          coin.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
 
     // Apply filter states
     if (activeFilters.gainers) {
@@ -116,18 +155,14 @@ export function CoinListing({ selectedBlockchain }: CoinListingProps) {
 
   const displayCoins = filteredAndSortedCoins();
 
-  const handleBuyCoin = (coin: CoinData) => {
-    setSelectedCoin(coin);
-    setShowBuyModal(true);
-  };
-
   const formatNumber = (num: number, decimals: number = 2) => {
     if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`;
     if (num >= 1000) return `${(num / 1000).toFixed(1)}K`;
     return num.toFixed(decimals);
   };
 
-  const formatPrice = (price: number) => {
+  const formatPrice = (price: number | null | undefined) => {
+    if (!price || price <= 0) return '0.0000';
     if (price < 0.001) return price.toFixed(8);
     if (price < 1) return price.toFixed(6);
     return price.toFixed(4);
@@ -141,70 +176,63 @@ export function CoinListing({ selectedBlockchain }: CoinListingProps) {
 
   return (
     <div className="flex-1 bg-black text-white">
-      {/* Top Header Bar */}
+      {/* Filters - Enhanced to match filter.png design */}
       <div className="flex items-center justify-between px-6 py-3 bg-zinc-900 border-b border-zinc-800">
-        <div className="flex items-center gap-4">
-          {/* Trending Button with time options */}
-          <div className="flex items-center gap-1">
-            <button
-              className={`flex items-center gap-2 px-4 py-2 rounded-l-lg text-sm font-medium transition-colors ${
-                activeFilters.trending
-                  ? "bg-blue-600 text-white"
-                  : "bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
-              }`}
-              onClick={() =>
-                setActiveFilters({
-                  ...activeFilters,
-                  trending: !activeFilters.trending,
-                })
-              }
-            >
-              <Flame className="w-4 h-4" />
-              Trending
-              <span className="bg-orange-500 text-white text-xs px-1.5 py-0.5 rounded font-bold ml-1">
-                5
-              </span>
-            </button>
-            <div className="flex items-center bg-zinc-800 rounded-r-lg">
-              {["5M", "1H", "6H", "24H"].map((timeframe) => (
-                <button
-                  key={timeframe}
-                  onClick={() => setActiveTimeFrame(timeframe)}
-                  className={`px-3 py-2 text-sm font-medium transition-colors ${
-                    activeTimeFrame === timeframe
-                      ? "bg-zinc-600 text-white"
-                      : "text-zinc-400 hover:text-white"
-                  }`}
-                >
-                  {timeframe}
-                </button>
-              ))}
-            </div>
+        <div className="flex items-center gap-3">
+          {/* Enhanced Search Input */}
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search tokens..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-56 bg-zinc-800 text-white placeholder-zinc-400 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 border border-zinc-700"
+            />
           </div>
 
-          {/* Top Button */}
+          {/* Trending Button */}
           <button
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-              activeFilters.top
-                ? "bg-zinc-600 text-white"
+              activeFilters.trending
+                ? "bg-blue-600 text-white"
                 : "bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
             }`}
             onClick={() =>
               setActiveFilters({
                 ...activeFilters,
-                top: !activeFilters.top,
+                trending: !activeFilters.trending,
               })
             }
           >
-            <BarChart3 className="w-4 h-4" />
-            Top
+            <Flame className="w-4 h-4" />
+            Trending
+            <span className="bg-orange-500 text-white text-xs px-1.5 py-0.5 rounded font-bold">
+              6
+            </span>
           </button>
+
+          {/* Time Frame Buttons */}
+          <div className="flex items-center gap-1 bg-zinc-800 rounded-lg p-1">
+            {["5M", "1H", "6H", "24H"].map((timeframe) => (
+              <button
+                key={timeframe}
+                onClick={() => setActiveTimeFrame(timeframe)}
+                className={`px-3 py-1.5 text-sm font-medium rounded transition-colors ${
+                  activeTimeFrame === timeframe
+                    ? "bg-zinc-600 text-white"
+                    : "text-zinc-400 hover:text-white"
+                }`}
+              >
+                {timeframe}
+              </button>
+            ))}
+          </div>
 
           {/* Gainers Button */}
           <button
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               activeFilters.gainers
-                ? "bg-green-600 text-white"
+                ? "bg-blue-600 text-white"
                 : "bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
             }`}
             onClick={() =>
@@ -214,19 +242,15 @@ export function CoinListing({ selectedBlockchain }: CoinListingProps) {
               })
             }
           >
-            <TrendingUp className="w-4 h-4" />
+            <BarChart3 className="w-4 h-4" />
             Gainers
           </button>
-        </div>
-
-        <div className="flex items-center gap-4">
-          {/* Clean header - user auth is handled in sidebar */}
         </div>
       </div>
 
       {/* Table */}
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[1400px]">
+        <table className="w-full min-w-[1200px]">
           <thead>
             <tr className="text-zinc-400 text-sm border-b border-zinc-800">
               <th className="text-left p-3 font-medium w-80">TOKEN</th>
@@ -241,13 +265,12 @@ export function CoinListing({ selectedBlockchain }: CoinListingProps) {
               <th className="text-left p-3 font-medium">24H</th>
               <th className="text-left p-3 font-medium">LIQUIDITY</th>
               <th className="text-left p-3 font-medium">MCAP</th>
-              <th className="text-left p-3 font-medium">ACTION</th>
             </tr>
           </thead>
           <tbody>
             {loading ? (
               <tr>
-                <td colSpan={13} className="p-8 text-center">
+                <td colSpan={12} className="p-8 text-center">
                   <div className="flex items-center justify-center gap-2">
                     <Loader2 className="w-5 h-5 animate-spin" />
                     <span className="text-zinc-400">
@@ -259,7 +282,7 @@ export function CoinListing({ selectedBlockchain }: CoinListingProps) {
               </tr>
             ) : error ? (
               <tr>
-                <td colSpan={13} className="p-8 text-center">
+                <td colSpan={12} className="p-8 text-center">
                   <div className="text-red-400">
                     <p className="mb-2">Failed to load data</p>
                     <p className="text-sm text-zinc-500">{error}</p>
@@ -268,8 +291,10 @@ export function CoinListing({ selectedBlockchain }: CoinListingProps) {
               </tr>
             ) : displayCoins.length === 0 ? (
               <tr>
-                <td colSpan={13} className="p-8 text-center text-zinc-400">
-                  No meme coins found for {selectedBlockchain?.name || "this blockchain"}
+                <td colSpan={12} className="p-8 text-center text-zinc-400">
+                  {searchQuery
+                    ? `No results found for "${searchQuery}"`
+                    : `No meme coins found for ${selectedBlockchain?.name || "this blockchain"}`}
                 </td>
               </tr>
             ) : (
@@ -292,7 +317,9 @@ export function CoinListing({ selectedBlockchain }: CoinListingProps) {
                             height={24}
                             className="rounded-full"
                             onError={() => {
-                              setImageErrors(prev => new Set([...prev, coin.id]));
+                              setImageErrors(
+                                (prev) => new Set([...prev, coin.id])
+                              );
                             }}
                           />
                         ) : (
@@ -334,28 +361,28 @@ export function CoinListing({ selectedBlockchain }: CoinListingProps) {
                     {formatNumber(coin.makers, 0)}
                   </td>
                   <td
-                    className={`p-3 font-medium min-w-[80px] ${getPriceChangeColor(coin.changes.m5)}`}
+                    className={`p-3 font-medium min-w-[80px] ${getPriceChangeColor(coin.changes.m5 || 0)}`}
                   >
-                    {coin.changes.m5 > 0 ? "+" : ""}
-                    {coin.changes.m5.toFixed(2)}%
+                    {(coin.changes.m5 || 0) > 0 ? "+" : ""}
+                    {coin.changes.m5?.toFixed(2) || '0.00'}%
                   </td>
                   <td
-                    className={`p-3 font-medium min-w-[80px] ${getPriceChangeColor(coin.changes.h1)}`}
+                    className={`p-3 font-medium min-w-[80px] ${getPriceChangeColor(coin.changes.h1 || 0)}`}
                   >
-                    {coin.changes.h1 > 0 ? "+" : ""}
-                    {coin.changes.h1.toFixed(2)}%
+                    {(coin.changes.h1 || 0) > 0 ? "+" : ""}
+                    {coin.changes.h1?.toFixed(2) || '0.00'}%
                   </td>
                   <td
-                    className={`p-3 font-medium min-w-[80px] ${getPriceChangeColor(coin.changes.h6)}`}
+                    className={`p-3 font-medium min-w-[80px] ${getPriceChangeColor(coin.changes.h6 || 0)}`}
                   >
-                    {coin.changes.h6 > 0 ? "+" : ""}
-                    {coin.changes.h6.toFixed(2)}%
+                    {(coin.changes.h6 || 0) > 0 ? "+" : ""}
+                    {coin.changes.h6?.toFixed(2) || '0.00'}%
                   </td>
                   <td
-                    className={`p-3 font-medium min-w-[80px] ${getPriceChangeColor(coin.changes.h24)}`}
+                    className={`p-3 font-medium min-w-[80px] ${getPriceChangeColor(coin.changes.h24 || 0)}`}
                   >
-                    {coin.changes.h24 > 0 ? "+" : ""}
-                    {coin.changes.h24.toFixed(2)}%
+                    {(coin.changes.h24 || 0) > 0 ? "+" : ""}
+                    {coin.changes.h24?.toFixed(2) || '0.00'}%
                   </td>
                   <td className="p-3 text-zinc-300 min-w-[100px]">
                     ${formatNumber(coin.liquidity)}K
@@ -363,28 +390,12 @@ export function CoinListing({ selectedBlockchain }: CoinListingProps) {
                   <td className="p-3 text-zinc-300 min-w-[100px]">
                     ${formatNumber(coin.mcap)}M
                   </td>
-                  <td className="p-3 min-w-[100px]">
-                    <button
-                      onClick={() => handleBuyCoin(coin)}
-                      className="flex items-center gap-2 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors"
-                    >
-                      <ShoppingCart className="w-3 h-3" />
-                      Buy
-                    </button>
-                  </td>
                 </tr>
               ))
             )}
           </tbody>
         </table>
       </div>
-
-      {/* Modals */}
-      <BuyModal
-        isOpen={showBuyModal}
-        onClose={() => setShowBuyModal(false)}
-        coin={selectedCoin}
-      />
     </div>
   );
 }
