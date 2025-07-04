@@ -1,0 +1,95 @@
+crypto prices if there is a capture on a website you know it's being used very heavily Dex screener is one of such
+24:55
+websites that's currently being very actively boted SL used on the Solana blockchain why because it tracks the
+25:03
+current price of a bunch of meme coins a lot of times these meme coins have you know 10x 100x potential I don't know if
+25:10
+you guys know andate launched this coin weird things happened over there let me
+25:18
+see yeah it's called daddy Tate um and you know even during that time a website like this especially you know if you're
+25:24
+able to catch it here right before the launch or you know right at the launch can you know lead to 100x outcomes I'm
+25:30
+not saying it's a bad it's a good thing to do you shouldn't follow these trades but a lot of people do since a lot of Traders and people are you know
+25:35
+following these meme coins um maybe this is not the right one actually but either way since a lot of uh Traders are
+25:42
+following these meme coins a lot of times they require either websites that can track the current price of a a meme
+25:48
+coin this is hard to do because these meme coins aren't listed on centralized exchanges yet they come up on some
+25:54
+random dexes so you have to make sure you're actively tracking all the decentralized changes that exist every
+25:59
+new token that is being created whever there's a market being created for it you should start to pull it and you know
+26:05
+show it on your website if there's a lot of activity happening on someone if there's one that's you know increasing a
+26:11
+lot in price over the last whatever 24 hours or 5 minutes then you know you should show them here um of course A lot
+26:18
+of them these are just scams and you know people pumping their own coins so be very careful and you know always look at liquidity before you're buying or
+26:24
+selling any one of these but yeah a lot of companies sort of make make a lot of money in transaction fees um if you're
+26:31
+able to build a place where people want to track meme coins a lot of times that is telegram groups as well which means creating a bot on a telegram group where
+26:38
+people can come check the current prices of meme coins and you know if there's one spiking up very quickly buy it in a
+26:43
+single message sell it in a single message uh Bon bot is one such very famous use case that made I don't know
+26:49
+how much they made I think like half half a billion dollars or 50 million something in that range in just transaction fees over a really long time
+26:55
+like a year or so not even a really long time so if you catch the right set of Deion um and you know give them good
+27:01
+price discovery on Meme coins um and let them trade you can take a small portion of the trade which is sometimes like as
+27:06
+high as 1% so if you have a lot of volumes you can make a lot of money um I would build this uh purely you know
+27:12
+preparing for whenever a meme cycle happens and you know people want to quickly buy and sell a lot of times
+27:17
+these were being used by eth people who want to quickly move over to Solana uh because they just felt like okay there's
+27:22
+a lot of activity happening on Solana they don't know how to buy Solana yet so they would just create a wallet on some telegram bot move their there swap the E
+27:29
+for their soul and then you know use the soul to buy a bunch of these meme coins so I would build this if I had the time
+27:35
+today uh technically how do you build this as I said you need to make sure you're constantly tracking all market
+27:42
+makers SL liquidity pools that currently exist on chain most probably any coin
+27:47
+that is here does not exist on a centralized exchange so the price Discovery is the thing that
+27:54
+becomes you know critical over here how quickly can you find what trades are happening and what is the current price
+28:00
+of any mem coin store them or throw them in some sort of a database do all sort of analytics on top of it to figure out
+28:05
+you know what's the current 5 minute increase the 1 hour increase the one day
+28:10
+increase of each of these coins and based on that you know people see it either in a UI or people see it on some
+28:16
+sort of a telegram group even if you're building this UI there's like a lot of things to learn for example charting how do you chart candles like these uh swaps
+28:23
+how do you call the right set of apis if you directly want the user to swap from here here they just let you you know
+28:29
+trade on radium which I'm assuming is just an i frame uh but if you're building a telegram bot then how do you create a wallet for a user and how do
+28:35
+you swap on their behalf if they ever want to buy a meme coin that's the idea build it I buil this for the salana
+28:41
+hackathon a WhatsApp version of the bot like a lot to learn if you're building something like this moving on oh boy
+28:47
+before we move on I found the page that shows how much they're making in fees and bonmot is made has made $100,000 in
+28:54
+the last 24 hours in fees till date they've made $50 million solid business to build if you've built the right
+29:01
+distribution it's a distribution first business Tech doesn't give you too much edge here the thing that gave the mge
+29:06
+was you know finding the right set of degenerate Traders and you know letting them trade on telegram on to the next
+29:12
+one crypto payment Gateway uh I'm sure some of you have heard of companies like stripe or Razer pay if you've ever used
+29:18
+them in the past they basically give you apis to talk to Banks and accept
+29:25
+payments from your end users if you're creating any digital product you you have to integrate with one of these two they charge like 2% fees so if you're
+29:32
+you know if your end user is paying 100 rupees you get 98 rupes 2 rupees goes to either Razer pay or stripe whatever you
+29:38
+are using crypto payment gateways are very similar um they let you accept payments from end users and let them pay
